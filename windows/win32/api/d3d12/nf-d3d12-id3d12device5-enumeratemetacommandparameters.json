@@ -1,0 +1,14 @@
+{
+  "Syntax": "HRESULT EnumerateMetaCommandParameters(\n  [In][Const] Guid* CommandId,\n  [In] D3D12_META_COMMAND_PARAMETER_STAGE Stage,\n  [Optional][Out] uint* pTotalStructureSizeInBytes,\n  [In][Out] uint* pParameterCount,\n  [Optional][Out][NativeArrayInfo (CountParamIndex = 3)] D3D12_META_COMMAND_PARAMETER_DESC* pParameterDescs,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device5-enumeratemetacommandparameters",
+  "Description": "指定されたメタコマンドのパラメータに関するリフレクションメタデータを問い合わせます。",
+  "Parameters": {
+    "CommandId": "型: <b>REFIID</b>\n\n<i>pParameterDescs</i>でパラメータを返したいメタコマンドのグローバル・ユニーク・アイデンティティ（GUID）への参照。",
+    "Stage": "型: <b>D3D12_META_COMMAND_PARAMETER_STAGE</b>\n\nクエリに含ませたいパラメータの段階を指定する<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/ne-d3d12-d3d12_meta_command_parameter_stage\">D3D12_META_COMMAND_PARAMETER_STAGE</a>。",
+    "pTotalStructureSizeInBytes": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a>*</b>\n\nパラメータ値を含む構造体のサイズを含む<a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a>への任意のポインタで、メタコマンドの作成／初期化／実行の際に適宜渡します。",
+    "pParameterCount": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a>*</b>\n\n照会するパラメータの数を含む<a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a>へのポインタです。このフィールドは、<i>pParameterDescs</i>が<b>nullptr</b>でない限り、<i>pParameterDescs</i>の配列のサイズを決定します。",
+    "pParameterDescs": "型: <b>D3D12_META_COMMAND_PARAMETER_DESC*</b>\n\nパラメータの説明を含む<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/ns-d3d12-d3d12_meta_command_parameter_desc\">D3D12_META_COMMAND_PARAMETER_DESC</a>の配列への任意のポインタです。<b>nullptr</b>を渡すと、パラメータの数が<i>pParameterCount</i>で返されます。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b>HRESULT</b>\n\nこのメソッドが成功した場合、<b xmlns:loc=\"http://microsoft.com/wdcml/l10n\">S_OK</b>を返します。それ以外の場合は、<b xmlns:loc=\"http://microsoft.com/wdcml/l10n\">HRESULT</b>のエラーコードを返します。"
+}
