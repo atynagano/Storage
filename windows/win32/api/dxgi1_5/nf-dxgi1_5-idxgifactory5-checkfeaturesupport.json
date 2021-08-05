@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CheckFeatureSupport(\n  [In] DXGI_FEATURE Feature,\n  [In][Out][MemorySize (BytesParamIndex = 2)] void* pFeatureSupportData,\n  [In] uint FeatureSupportDataSize,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_5/nf-dxgi1_5-idxgifactory5-checkfeaturesupport",
+  "Description": "ハードウェア機能のサポートを確認するために使用します。",
+  "Parameters": {
+    "Feature": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_5/ne-dxgi1_5-dxgi_feature\">DXGI_FEATURE</a></b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_5/ne-dxgi1_5-dxgi_feature\">DXGI_FEATURE</a>のメンバー1人を指定して、サポートを問い合わせます。",
+    "pFeatureSupportData": "型: <b>void*</b>\n\n機能サポートを説明するデータが格納されるバッファへのポインタを指定します。",
+    "FeatureSupportDataSize": "型: <b>UINT</b>\n\n<i>pFeatureSupportData</i>のサイズ（バイト単位）です。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、HRESULTの成功またはエラーコードを返します。"
+}
