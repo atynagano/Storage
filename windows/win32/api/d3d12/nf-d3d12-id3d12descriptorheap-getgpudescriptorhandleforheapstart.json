@@ -1,8 +1,8 @@
 {
   "Syntax": "D3D12_GPU_DESCRIPTOR_HANDLE GetGPUDescriptorHandleForHeapStart();",
   "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart",
-  "Description": "ヒープの始まりを表すGPU 記述子ハンドルを取得します。",
+  "Description": "ヒープの始まりを表すGPU記述子ハンドルを取得します。",
   "Parameters": {},
   "Fields": {},
-  "ReturnValue": "型: <b><a href=\"/windows/desktop/api/d3d12/ns-d3d12-d3d12_gpu_descriptor_handle\">D3D12_GPU_DESCRIPTOR_HANDLE</a></b>\n\nヒープの始まりを表すGPU 記述子ハンドルを返します。"
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/api/d3d12/ns-d3d12-d3d12_gpu_descriptor_handle\">D3D12_GPU_DESCRIPTOR_HANDLE</a></b>\n\nヒープの始まりを表すGPU記述子ハンドルを返します。"
 }
