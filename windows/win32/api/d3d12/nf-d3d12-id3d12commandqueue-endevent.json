@@ -1,0 +1,8 @@
+{
+  "Syntax": "void EndEvent();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12commandqueue-endevent",
+  "Description": "直接呼び出すことを意図していません。PIXイベントランタイムを使用して、イベントをコマンドキューに挿入します。",
+  "Remarks": "\nこれは、PIXイベントランタイムが内部的に使用するサポートメソッドです。直接呼び出されることは想定していません。\n\nD3D12コマンドキュー内の現在の位置でインストルメンテーション領域の終わりをマークするには、<b>PIXEndEvent</b>関数または<b>PIXScopedEvent</b>マクロを使用します。これらは<a href=\"https://devblogs.microsoft.com/pix/winpixeventruntime/\">WinPixEventRuntime</a>NuGetパッケージで提供されています。\n\n",
+  "Parameters": {},
+  "Fields": {}
+}
