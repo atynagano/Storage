@@ -1,0 +1,8 @@
+{
+  "Syntax": "ulong GetPipelineStackSize();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12stateobjectproperties-getpipelinestacksize",
+  "Description": "現在のパイプラインのスタックサイズを取得します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "現在のパイプラインのスタックサイズ（バイト）。コレクションのような実行不可能な状態のオブジェクトに対して呼び出された場合、戻り値は0です。"
+}
