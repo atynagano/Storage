@@ -1,0 +1,10 @@
+{
+  "Syntax": "void DispatchRays(\n  [In][Const] D3D12_DISPATCH_RAYS_DESC* pDesc,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist4-dispatchrays",
+  "Description": "レイジェネレーションシェーダのスレッドを起動します。",
+  "Remarks": "\nこのメソッドは、GraphicsやComputeのコマンドリストやバンドルから呼び出すことができます。\n\n\n\nレイトレーシングパイプラインの状態がコマンドリストに設定されている必要があります。それ以外の場合、この呼び出しの動作は未定義です。\n\nグリッドのサイズを設定するために，幅，高さ，深さの3つの寸法が渡されます．これらの寸法は、width*height*depth<=2^30となるように制約されます。これを超えると、未定義の動作となります。\nグリッドサイズが0の場合、スレッドは起動しません。\n\n",
+  "Parameters": {
+    "pDesc": "レイ・ディスパッチの説明"
+  },
+  "Fields": {}
+}
