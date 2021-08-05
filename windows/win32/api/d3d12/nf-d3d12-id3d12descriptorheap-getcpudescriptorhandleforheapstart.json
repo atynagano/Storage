@@ -1,0 +1,8 @@
+{
+  "Syntax": "D3D12_CPU_DESCRIPTOR_HANDLE GetCPUDescriptorHandleForHeapStart();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart",
+  "Description": "ヒープの始まりを表すCPUディスクリプターハンドルを取得します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>\n\nヒープの開始位置を示すCPUディスクリプターハンドルを返します。"
+}
