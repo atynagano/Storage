@@ -1,0 +1,14 @@
+{
+  "Syntax": "HRESULT CreateSwapChainForCoreWindow(\n  [In] IUnknown pDevice,\n  [In] IUnknown pWindow,\n  [In][Const] DXGI_SWAP_CHAIN_DESC1* pDesc,\n  [Optional][In] IDXGIOutput pRestrictToOutput,\n  [Out][ComOutPtr] IDXGISwapChain1* ppSwapChain,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow",
+  "Description": "スワップチェーンの出力ウィンドウのCoreWindowオブジェクトに関連付けられたスワップチェーンを作成します。",
+  "Parameters": {
+    "pDevice": "Direct3D11およびそれ以前のバージョンのDirect3Dでは、スワップチェーン用のDirect3Dデバイスへのポインタです。Direct3D12の場合は、ダイレクトコマンドキューへのポインタです（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue\">ID3D12CommandQueue</a>参照）。このパラメータを<b>NULL</b>にすることはできません。",
+    "pWindow": "<b>CreateSwapChainForCoreWindow</b>が作成するスワップチェーンに関連付けられた<a href=\"https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow\">CoreWindow</a>オブジェクトへのポインタです。",
+    "pDesc": "スワップチェーンの記述のための<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1\">DXGI_SWAP_CHAIN_DESC1</a>構造体へのポインタ。このパラメータを<b>NULL</b>にすることはできません。",
+    "pRestrictToOutput": "スワップチェーンが制限される<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgioutput\">IDXGIOutput</a>インターフェイスへのポインタです。スワップチェーンが別の出力に移動した場合、コンテンツは黒になります。オプションで、<a href=\"https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-present\">DXGI_PRESENT_RESTRICT_TO_OUTPUT</a>を使用する出力ターゲットにこのパラメータを設定して、この出力上のコンテンツを制限することができます。出力ターゲットでコンテンツを制限するためにこのパラメーターを設定しない場合は、<b>NULL</b>に設定することができます。",
+    "ppSwapChain": "<b>CreateSwapChainForCoreWindow</b>が作成するスワップチェーンの<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1\">IDXGISwapChain1</a>インターフェースへのポインタを受け取る変数へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "<b>CreateSwapChainForCoreWindow</b>が戻る。\n<ul><li>S_OK if it successfully created a swap chain.</li><li>E_OUTOFMEMORY if memory is unavailable to complete the operation.</li><li><a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_INVALID_CALL</a>  if the calling application provided invalid data, for example, if <i>pDesc</i> or <i>ppSwapChain</i> is <b>NULL</b>.</li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a> topic that are defined by the type of device that you pass to <i>pDevice</i>.</li></ul>\n\n<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、<b>CreateSwapChainForCoreWindow</b>がE_NOTIMPLで失敗します。Windows7のPlatformUpdateについては、<a href=\"/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>を参照してください。"
+}
