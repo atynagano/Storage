@@ -1,1 +1,12 @@
-ID3D12Resource::Map method (d3d12.h)
+{
+  "Syntax": "HRESULT Map(\n  [In] uint Subresource,\n  [Optional][In][Const] D3D12_RANGE* pReadRange,\n  [Optional][Out] void** ppData,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12resource-map",
+  "Description": "リソース内の指定されたサブリソースへのCPUポインタを取得しますが、ポインタの値をアプリケーションに公開してはいけません。Mapはまた、必要に応じてCPUキャッシュを無効にして、このアドレスへのCPUの読み込みにGPUによる変更が反映されるようにします。",
+  "Parameters": {
+    "Subresource": "型: <b>UINT</b>\n\nサブリソースのインデックス番号を指定します。",
+    "pReadRange": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_range\">D3D12_RANGE</a>*</b>\n\nアクセスするメモリの範囲を記述した<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_range\">D3D12_RANGE</a>構造体へのポインタです。\n\nこれは、CPUが読み取る可能性のある領域を示しており、座標はサブリソースに関連しています。NULLポインタは、サブリソース全体がCPUによって読み取られる可能性があることを示す。<b>End</b>が<b>Begin</b>以下の範囲を指定することで、CPUがデータを読まないことを指定することができます。",
+    "ppData": "型: <b><b>void</b>**</b>\n\nリソースデータへのポインタを受信するメモリブロックへのポインタです。\n\nNULLポインタは有効で、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-writetosubresource\">WriteToSubresource</a>などのメソッドでCPUの仮想アドレス範囲をキャッシュするのに便利です。<i>ppData</i>がNULLでない場合、返されるポインタは<i>pReadRange</i>のどの値によってもオフセットされることはありません。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>のいずれかを返します。"
+}
