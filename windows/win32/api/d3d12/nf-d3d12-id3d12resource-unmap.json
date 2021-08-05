@@ -1,0 +1,11 @@
+{
+  "Syntax": "void Unmap(\n  [In] uint Subresource,\n  [Optional][In][Const] D3D12_RANGE* pWrittenRange,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12resource-unmap",
+  "Description": "リソース内の指定されたサブリソースへのCPUポインタを無効にします。アンマップはまた、必要に応じてCPUキャッシュをフラッシュするので、このアドレスへのGPUの読み込みには、CPUによる変更が反映されます。",
+  "Remarks": "\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-map\">Map</a>方式については、豊富な備考と例題を参照してください。\n\n",
+  "Parameters": {
+    "Subresource": "型: <b>UINT</b>\n\nサブリソースのインデックスを指定します。",
+    "pWrittenRange": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_range\">D3D12_RANGE</a>*</b>\n\nアンマップするメモリの範囲を記述した<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_range\">D3D12_RANGE</a>構造体へのポインタです。\n\nこれは、CPUが変更した可能性のある領域を示しており、座標はサブリソースに関連しています。NULLポインタは、サブリソース全体がCPUによって変更された可能性があることを示す。<b>End</b>が<b>Begin</b>以下の範囲を渡すことで、CPUがデータを書き込まなかったことを指定することができます。"
+  },
+  "Fields": {}
+}
