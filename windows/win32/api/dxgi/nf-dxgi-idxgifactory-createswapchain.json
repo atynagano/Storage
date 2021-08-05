@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CreateSwapChain(\n  [In] IUnknown pDevice,\n  [In] DXGI_SWAP_CHAIN_DESC* pDesc,\n  [Out][ComOutPtr] IDXGISwapChain* ppSwapChain,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi/nf-dxgi-idxgifactory-createswapchain",
+  "Description": "スワップチェーンを作成します。",
+  "Parameters": {
+    "pDevice": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown\">IUnknown</a>*</b>\n\nDirect3D11およびそれ以前のバージョンのDirect3Dでは、スワップチェーン用のDirect3Dデバイスへのポインタです。Direct3D12の場合は、ダイレクトコマンドキュー（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue\">ID3D12CommandQueue</a>参照）へのポインタです。このパラメータを<b>NULL</b>にすることはできません。",
+    "pDesc": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc\">DXGI_SWAP_CHAIN_DESC</a>*</b>\n\nスワップチェーンの記述のための<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc\">DXGI_SWAP_CHAIN_DESC</a>構造体へのポインタ。このパラメータを<b>NULL</b>にすることはできません。",
+    "ppSwapChain": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiswapchain\">IDXGISwapChain</a>**</b>\n\n<b>CreateSwapChain</b>が作成するスワップチェーンの<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiswapchain\">IDXGISwapChain</a>インターフェースへのポインタを受け取る変数へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n<i>pDesc</i>または<i>ppSwapChain</i>が<b>NULL</b>の場合は<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_INVALID_CALL</a>、フルスクリーンモードを要求したが利用できなかった場合はDXGI_STATUS_OCCLUDED、またはE_OUTOFMEMORY。その他、渡されたデバイスの種類に応じたエラーコードが返されることもあります。"
+}
