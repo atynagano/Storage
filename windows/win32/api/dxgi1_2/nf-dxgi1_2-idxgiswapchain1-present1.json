@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT Present1(\n  [In] uint SyncInterval,\n  [In] uint PresentFlags,\n  [In][Const] DXGI_PRESENT_PARAMETERS* pPresentParameters,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1",
+  "Description": "画面上にフレームを表示します。",
+  "Parameters": {
+    "SyncInterval": "フレームの表示と垂直方向のブランクを同期させる方法を指定する整数です。\n\n\nビット・ブロック・トランスファー（bitblt）モデル（<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect\">DXGI_SWAP_EFFECT_DISCARD</a>または<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect\">DXGI_SWAP_EFFECT_SEQUENTIAL</a>）の場合、値は\n\n<ul><li>0 - The presentation occurs immediately, there is no synchronization.</li><li>1 through 4 - Synchronize presentation after the <i>n</i>th vertical blank.</li></ul>\nフリップモデル（<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect\">DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL</a>）の場合、値は\n\n<ul><li>0 - Cancel the remaining time on the previously presented frame and discard this frame if a newer frame is queued.\n</li><li>1 through 4 - Synchronize presentation for at least <i>n</i> vertical blanks.</li></ul>\n同期間隔の値がフリップ・プレゼンテーション・キューに与える影響を示す例については、「備考」を参照してください。\n\n更新領域が複数の出力（それぞれ<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgioutput1\">IDXGIOutput1</a>で表される）にまたがっている場合、<b>Present1</b>はターゲットウィンドウのクライアント領域の最大のサブレクタンギュラーを含む出力に同期を実行します。",
+    "PresentFlags": "スワップチェーンの表示オプションを含む整数値です。これらのオプションは<a href=\"https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-present\">DXGI_PRESENT</a>定数で定義されます。",
+    "pPresentParameters": "提示するフレームの更新された矩形とスクロール情報を記述した<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_present_parameters\">DXGI_PRESENT_PARAMETERS</a>構造体へのポインタ。"
+  },
+  "Fields": {},
+  "ReturnValue": "可能な戻り値は以下のとおりです。S_OK、<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_DEVICE_REMOVED</a>、<a href=\"/windows/desktop/direct3ddxgi/dxgi-status\">DXGI_STATUS_OCCLUDED</a>、<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_INVALID_CALL</a>、E_OUTOFMEMORYのいずれかが返されます。"
+}
