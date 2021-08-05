@@ -1,0 +1,8 @@
+{
+  "Syntax": "uint GetCreationFlags();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_3/nf-dxgi1_3-idxgifactory3-getcreationflags",
+  "Description": "MicrosoftDirectXGraphicsInfrastructure（DXGI）オブジェクトの作成時に使用されたフラグを取得する。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "作成フラグです。"
+}
