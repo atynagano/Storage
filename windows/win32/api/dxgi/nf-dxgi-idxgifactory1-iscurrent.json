@@ -1,0 +1,8 @@
+{
+  "Syntax": "BOOL IsCurrent();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi/nf-dxgi-idxgifactory1-iscurrent",
+  "Description": "アダプタの再列挙が必要になる可能性があることを、アプリケーションに通知します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/WinProg/windows-data-types\">BOOL</a></b>\n\n<b>FALSE</b>、新しいアダプタが利用可能になるか、現在のアダプタがなくなる場合。\n<b>TRUE</b>、アダプターの変更なし。\n\n<b>IsCurrent</b>は<b>FALSE</b>を返して、呼び出し側のアプリケーションにアダプタの再列挙を知らせます。"
+}
