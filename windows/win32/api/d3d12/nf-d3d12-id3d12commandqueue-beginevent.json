@@ -1,0 +1,12 @@
+{
+  "Syntax": "void BeginEvent(\n  [In] uint Metadata,\n  [Optional][In][Const][MemorySize (BytesParamIndex = 2)] void* pData,\n  [In] uint Size,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12commandqueue-beginevent",
+  "Description": "直接呼び出すことを意図していません。PIXイベントランタイムを使用して、イベントをコマンドキューに挿入します。",
+  "Remarks": "\nこれは、PIXイベントランタイムが内部的に使用するサポートメソッドです。直接呼び出されることは想定していません。\n\nD3D12コマンドキュー内の現在の位置にインストルメンテーション領域の開始をマークするには、<b>PIXBeginEvent</b>関数または<b>PIXScopedEvent</b>マクロを使用します。これらは<a href=\"https://devblogs.microsoft.com/pix/winpixeventruntime/\">WinPixEventRuntime</a>NuGetパッケージで提供されています。\n\n",
+  "Parameters": {
+    "Metadata": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n内部的には",
+    "pData": "型: <b>const void*</b>\n\n内部的には",
+    "Size": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n内部的には"
+  },
+  "Fields": {}
+}
