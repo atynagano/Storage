@@ -1,0 +1,8 @@
+{
+  "Syntax": "D3D12_DESCRIPTOR_HEAP_DESC GetDesc();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12descriptorheap-getdesc",
+  "Description": "記述子ヒープの説明を取得します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc\">D3D12_DESCRIPTOR_HEAP_DESC</a></b>\n\n記述子ヒープを<a href=\"/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc\">D3D12_DESCRIPTOR_HEAP_DESC</a>構造にした記述です。"
+}
