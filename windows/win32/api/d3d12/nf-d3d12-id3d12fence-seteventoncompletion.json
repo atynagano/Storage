@@ -1,1 +1,11 @@
-fuga
+{
+  "Syntax": "HRESULT SetEventOnCompletion(\n  [In] ulong Value,\n  [In] HANDLE hEvent,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12fence-seteventoncompletion",
+  "Description": "フェンスが一定の値に達したときに発生するイベントを指定します。",
+  "Parameters": {
+    "Value": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">UINT64</a></b>\n\nイベントを通知する際のフェンスの値です。",
+    "hEvent": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">HANDLE</a></b>\n\nイベントオブジェクトへのハンドルです。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b>HRESULT</b>\n\nこのメソッドは、カーネルコンポーネントがイベントをリストに格納するのに十分なメモリを持っていない場合、<b>E_OUTOFMEMORY</b>を返します。その他の可能な戻り値については、<a href=\"/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a> を参照してください。"
+}
