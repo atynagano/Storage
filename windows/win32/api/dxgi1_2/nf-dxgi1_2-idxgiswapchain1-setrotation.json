@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT SetRotation(\n  [In] DXGI_MODE_ROTATION Rotation,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation",
+  "Description": "スワップチェーンのバックバッファーの回転を設定します。",
+  "Parameters": {
+    "Rotation": "スワップチェーンのバックバッファの回転をどのように設定するかを指定する<a href=\"https://docs.microsoft.com/previous-versions/windows/desktop/legacy/bb173065(v=vs.85)\">DXGI_MODE_ROTATION</a>型の値です。"
+  },
+  "Fields": {},
+  "ReturnValue": "<b>SetRotation</b>が戻る。\n<ul><li>S_OK if it successfully set the rotation.</li><li>DXGI_ERROR_INVALID_CALL if the swap chain is bit-block transfer (bitblt) model. The swap chain must be flip model to successfully call <b>SetRotation</b>.</li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a> topic.</li></ul>\n\n<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、<b>SetRotation</b>がDXGI_ERROR_INVALID_CALLで失敗します。Windows7のPlatformUpdateの詳細については、<a href=\"/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>を参照してください。"
+}
