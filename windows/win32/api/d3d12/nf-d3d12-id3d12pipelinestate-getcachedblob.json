@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT GetCachedBlob(\n  [Out][ComOutPtr] ID3DBlob* ppBlob,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12pipelinestate-getcachedblob",
+  "Description": "パイプラインの状態を表すキャッシュされたblobを取得します。",
+  "Parameters": {
+    "ppBlob": "型: <b>ID3DBlob**</b>\n\nこのメソッドが戻ってくると、パイプラインの状態を表すキャッシュされたblobを指します。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>の1つを返します。"
+}
