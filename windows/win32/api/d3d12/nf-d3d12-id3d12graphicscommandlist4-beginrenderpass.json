@@ -1,0 +1,12 @@
+{
+  "Syntax": "void BeginRenderPass(\n  [In] uint NumRenderTargets,\n  [Optional][In][Const][NativeArrayInfo (CountParamIndex = 0)] D3D12_RENDER_PASS_RENDER_TARGET_DESC* pRenderTargets,\n  [Optional][In][Const] D3D12_RENDER_PASS_DEPTH_STENCIL_DESC* pDepthStencil,\n  [In] D3D12_RENDER_PASS_FLAGS Flags,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist4-beginrenderpass",
+  "Description": "レンダリングパスの期間中、出力リソースのセットをバインドすることで、レンダリングパスの開始をマークします。バインディングは、1つまたは複数のレンダーターゲットビュー（RTV）やデプスステンシルビュー（DSV）に行われます。",
+  "Parameters": {
+    "NumRenderTargets": "A<b>UINT</b>です。バインドされているレンダリングターゲットの数です。",
+    "pRenderTargets": "定数<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/ns-d3d12-d3d12_render_pass_render_target_desc\">D3D12_RENDER_PASS_RENDER_TARGET_DESC</a>へのポインタで、1つまたは複数のRTV（レンダーターゲットビュー）へのバインディング（レンダリングパスの期間中は固定）と、その開始および終了のアクセス特性が記述されています。",
+    "pDepthStencil": "定数<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/ns-d3d12-d3d12_render_pass_depth_stencil_desc\">D3D12_RENDER_PASS_DEPTH_STENCIL_DESC</a>へのポインタで、デプスステンシルビュー（DSV）へのバインディング（レンダリングパスの期間中は固定）と、その開始および終了のアクセス特性が記述されています。",
+    "Flags": "A<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/ne-d3d12-d3d12_render_pass_flags\">D3D12_RENDER_PASS_FLAGS</a>レンダリングパスの性質／要件：例えば、レンダリングパスが中断しているのか再開しているのか、順序付けられていないアクセスビューに書き込みたいのか、など。"
+  },
+  "Fields": {}
+}
