@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT GetHeapProperties(\n  [Optional][Out] D3D12_HEAP_PROPERTIES* pHeapProperties,\n  [Optional][Out] D3D12_HEAP_FLAGS* pHeapFlags,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12resource-getheapproperties",
+  "Description": "配置済みおよびコミット済みのリソースのリソースヒープのプロパティを取得します。",
+  "Parameters": {
+    "pHeapProperties": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_heap_properties\">D3D12_HEAP_PROPERTIES</a>*</b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_heap_properties\">D3D12_HEAP_PROPERTIES</a>構造体へのポインタで、このメソッドが正常に完了した場合、リソース・ヒープ・プロパティが格納されます。",
+    "pHeapFlags": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_flags\">D3D12_HEAP_FLAGS</a>*</b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_flags\">D3D12_HEAP_FLAGS</a>変数を指定します。この変数には、メソッドが正常に完了したときに、あらゆる雑多なヒープフラグが格納されます。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>のいずれかを返します。\nリソースが予約済みで作成されている場合は、E_INVALIDARGが返されます。"
+}
