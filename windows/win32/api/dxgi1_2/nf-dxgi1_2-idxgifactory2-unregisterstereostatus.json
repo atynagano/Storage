@@ -1,0 +1,10 @@
+{
+  "Syntax": "void UnregisterStereoStatus(\n  [In] uint dwCookie,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgifactory2-unregisterstereostatus",
+  "Description": "ウィンドウやイベントの登録を解除して、ステレオの状態が変化したときの通知を受け取らないようにします。",
+  "Remarks": "<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、<b>UnregisterStereoStatus</b>の効果はありません。Windows7のPlatformUpdateについては、<a href=\"https://docs.microsoft.com/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>をご覧ください。\n\n",
+  "Parameters": {
+    "dwCookie": "登録解除するウィンドウやイベントのキーとなる値です。<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-registerstereostatuswindow\">IDXGIFactory2::RegisterStereoStatusWindow</a>または<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-registerstereostatusevent\">IDXGIFactory2::RegisterStereoStatusEvent</a>メソッドはこの値を返します。"
+  },
+  "Fields": {}
+}
