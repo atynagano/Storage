@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT SetSourceSize(\n  [In] uint Width,\n  [In] uint Height,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_3/nf-dxgi1_3-idxgiswapchain2-setsourcesize",
+  "Description": "スワップチェーンに使用するソース領域を設定します。",
+  "Parameters": {
+    "Width": "スワップチェーンに使用するソースの幅。この値はゼロより大きく、スワップチェーンの全体の幅以下でなければなりません。",
+    "Height": "スワップチェーンに使用するソースの高さ。この値はゼロより大きく、スワップチェーンの全体の高さ以下でなければなりません。"
+  },
+  "Fields": {},
+  "ReturnValue": "このメソッドは返すことができます。\n\n<ul><li>E_INVALIDARG if one or more parameters exceed the size of the back buffer.</li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a> topic.</li></ul>"
+}
