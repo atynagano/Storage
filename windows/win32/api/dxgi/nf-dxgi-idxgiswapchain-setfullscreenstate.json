@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT SetFullscreenState(\n  [In] BOOL Fullscreen,\n  [Optional][In] IDXGIOutput pTarget,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi/nf-dxgi-idxgiswapchain-setfullscreenstate",
+  "Description": "表示状態をウィンドウ表示か全画面表示かを設定します。",
+  "Parameters": {
+    "Fullscreen": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">BOOL</a></b>\n\n表示状態をウィンドウズにするかフルスクリーンにするかを指定するブール値です。<b>TRUE</b>でフルスクリーン、<b>FALSE</b>でウィンドウ表示となります。",
+    "pTarget": "型: [in, optional] <b><a href=\"https://docs.microsoft.com/windows/win32/api/dxgi/nn-dxgi-idxgioutput\">IDXGIOutput</a>*</b>\n\n<i>Fullscreen</i>パラメータに<b>TRUE</b>を渡して表示状態をフルスクリーンに設定した場合、オプションでこのパラメータにスワップチェーンを含む出力ターゲットの<a href=\"https://docs.microsoft.com/windows/win32/api/dxgi/nn-dxgi-idxgioutput\">IDXGIOutput</a>インターフェースへのポインタを設定することができます。このパラメータに<b>NULL</b>を渡すと、DXGIはスワップチェーンのデバイスと出力ウィンドウの配置に基づいて出力を選択します。<b>FALSE</b>～<i>Fullscreen</i>を渡した場合は、このパラメータを<b>NULL</b>に設定する必要があります。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、これらの値のいずれかを返します。\n\n-アクションが成功し、スワップチェーンが要求された状態になった場合は**S_OK**。\n-DXGI_ERROR_NOT_CURRENTLY_AVAILABLE**（アクションが失敗した場合）。このエラーが返された場合、アプリケーションはウィンドウモードで実行を続け、後でフルスクリーンモードに切り替えようとすることができます。ウィンドウズモードのスワップチェーンがフルスクリーンモードに切り替えられない理由はたくさんあります。以下にいくつかの例を示します。\n-アプリケーションがTerminalServer上で動作している。\n-出力ウィンドウが隠れている。\n-出力ウィンドウにキーボードフォーカスがない。\n-別のアプリケーションがすでにフルスクリーンモードになっている。\n-DXGI_STATUS_MODE_CHANGE_IN_PROGRESS**は、本APIの呼び出し時にフルスクリーン／ウィンドウモードの移行が発生している場合に返されます。\n-その他のエラーコードメモリ不足や予期せぬ障害が発生した場合、これらのコードはハードで継続不可能なエラーとして扱われます。"
+}
