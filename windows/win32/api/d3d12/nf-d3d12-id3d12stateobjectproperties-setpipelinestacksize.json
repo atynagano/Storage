@@ -1,0 +1,10 @@
+{
+  "Syntax": "void SetPipelineStackSize(\n  [In] ulong PipelineStackSizeInBytes,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12stateobjectproperties-setpipelinestacksize",
+  "Description": "現在のパイプラインのスタックサイズを設定します。",
+  "Remarks": "\nこのメソッドと<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12stateobjectproperties-getpipelinestacksize\">GetPipelineStackSize</a>はリエントラントではありません。つまり、別々のスレッドからどちらか、または両方を呼び出した場合、アプリは独自に同期を取らなければなりません。\n\nランタイムは、コレクションなど、レイトレーシングパイプライン以外のステートオブジェクトへのコールを削除します。\n\n",
+  "Parameters": {
+    "PipelineStackSizeInBytes": "各シェーダースレッドのパイプライン実行時に使用するスタックサイズ（バイト）。GPUでは一度に何千ものスレッドが実行されることがあります。\n\nこの値が0xffffff（32ビットUINTの最大値）より大きい場合、ランタイムは呼び出しを中止し、デバッグ層はエラーを表示します。これは、0xffffffを返す無効なパラメータで呼び出された<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12stateobjectproperties-getshaderstacksize\">GetShaderStackSize</a>から返される無効なスタックサイズを合計した結果である可能性が高いからです。この場合、以前に設定されていたスタックサイズ、またはデフォルト値が残ります。"
+  },
+  "Fields": {}
+}
