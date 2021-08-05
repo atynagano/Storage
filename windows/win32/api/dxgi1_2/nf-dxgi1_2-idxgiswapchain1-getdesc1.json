@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT GetDesc1(\n  [Out] DXGI_SWAP_CHAIN_DESC1* pDesc,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-getdesc1",
+  "Description": "スワップチェーンの説明を取得します。",
+  "Parameters": {
+    "pDesc": "スワップチェーンを記述する<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1\">DXGI_SWAP_CHAIN_DESC1</a>構造体へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "成功した場合はS_OK、失敗した場合はエラーコードを返します。エラーコードの一覧は、<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>を参照してください。"
+}
