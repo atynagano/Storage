@@ -1,0 +1,12 @@
+{
+  "Syntax": "void EmitRaytracingAccelerationStructurePostbuildInfo(\n  [In][Const] D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC* pDesc,\n  [In] uint NumSourceAccelerationStructures,\n  [In][Const][NativeArrayInfo (CountParamIndex = 1)] ulong* pSourceAccelerationStructureData,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist4-emitraytracingaccelerationstructurepostbuildinfo",
+  "Description": "加速構造のセットのポストビルドプロパティを発行します。これにより、アプリケーションは、ID3D12GraphicsCommandList4::CoipraytracingAccelerationStructureを介して加速構造操作を行う際の出力リソース要件を知ることができます。",
+  "Remarks": "\nこのメソッドは、GraphicsやComputeのコマンドリストからは呼び出せますが、Bundleからは呼び出せません。\n\n",
+  "Parameters": {
+    "pDesc": "生成するpos-tbuild情報の説明。",
+    "NumSourceAccelerationStructures": "<i>pSourceAccelerationStructureData</i>で指される加速構造GPU仮想アドレスへのポインタの数。この数はデスティネーション（出力）にも影響し、<b>NumSourceAccelerationStructures</b>出力構造体の連続した配列となりますが、構造体のタイプは<i>pDesc</i>記述で供給される<i>InfoType</i>フィールドに依存します。",
+    "pSourceAccelerationStructureData": "<i>NumSourceAccelerationStructures</i>サイズのGPU仮想アドレスの配列へのポインタです。\n\nアドレスは、<a href=\"https://docs.microsoft.com/windows/desktop/direct3d12/constants\">D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BYTE_ALIGNMENT</a>として定義される256バイトにアラインされなければなりません。\n\n指し示されたメモリは、ステート<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states\">D3D12_RESOURCE_STATE_RAYTRACING_ACCELERATION_STRUCTURE</a>でなければなりません。"
+  },
+  "Fields": {}
+}
