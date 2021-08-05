@@ -1,0 +1,10 @@
+{
+  "Syntax": "void SetPipelineState1(\n  [In] ID3D12StateObject pStateObject,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist4-setpipelinestate1",
+  "Description": "コマンドリストに状態オブジェクトを設定します。",
+  "Remarks": "\nこのメソッドは、GraphicsやComputeのコマンドリストやバンドルから呼び出すことができます。\n\nこの方法は、グラフィックスシェーダとコンピュートシェーダでのみ定義されている<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate\">ID3D12GraphicsCommandList::SetPipelineState</a>の代替となります。一度にコマンドリスト上でアクティブになるパイプラインステートは1つだけなので、どちらのコールでも現在のパイプラインステートを設定します。この2つのコールの違いは、それぞれが特定のタイプのパイプラインステートのみを設定することです。現在のリリースでは、<b>SetPipelineState1</b>はレイトレーシングのパイプラインステートの設定にのみ使用されています。\n\n",
+  "Parameters": {
+    "pStateObject": "コマンドリストに設定するステートオブジェクトです。現在のリリースでは、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_state_object_type\">D3D12_STATE_OBJECT_TYPE_RAYTRACING_PIPELINE</a>タイプのみとなっています。"
+  },
+  "Fields": {}
+}
