@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT GetCoreWindow(\n  [In][Const] Guid* refiid,\n  [Out][ComOutPtr] void** ppUnk,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-getcorewindow",
+  "Description": "スワップチェーンオブジェクトに対応するCoreWindowオブジェクトを取得します。",
+  "Parameters": {
+    "refiid": "<i>ppUnk</i>パラメータで参照される<a href=\"https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow\">CoreWindow</a>オブジェクトのグローバルに一意な識別子（GUID）へのポインタです。\n<i>ppUnk</i>パラメータが参照する<a href=\"https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow\">CoreWindow</a>オブジェクトのグローバルに一意な識別子（GUID）へのポインタです。",
+    "ppUnk": "<a href=\"https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow\">CoreWindow</a>オブジェクトへのポインタを受け取る変数へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "<b>GetCoreWindow</b>が戻る。\n<ul><li>S_OK if it successfully retrieved the underlying <a href=\"/uwp/api/Windows.UI.Core.CoreWindow\">CoreWindow</a> object.</li><li><a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_INVALID_CALL</a>  if <i>ppUnk</i> is <b>NULL</b>; that is, the swap chain is not associated with a <a href=\"/uwp/api/Windows.UI.Core.CoreWindow\">CoreWindow</a> object.</li><li>Any <a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a> that a call to <a href=\"/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)\">QueryInterface</a> to query for an <a href=\"/uwp/api/Windows.UI.Core.CoreWindow\">CoreWindow</a> object might typically return.</li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a> topic. </li></ul>\n\n<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、<b>GetCoreWindow</b>がE_NOTIMPLで失敗します。Windows7のPlatformUpdateについては、<a href=\"/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>を参照してください。"
+}
