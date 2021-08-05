@@ -1,0 +1,11 @@
+{
+  "Syntax": "D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS CheckDriverMatchingIdentifier(\n  [In] D3D12_SERIALIZED_DATA_TYPE SerializedDataType,\n  [In][Const] D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER* pIdentifierToCheck,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device5-checkdrivermatchingidentifier",
+  "Description": "モードD3D12_RAYTRACING_ACCELERATION_STRUCTURE_mode_SERIALIZEでCopyRaytracingAccelerationStructureを呼び出した結果のシリアル化されたレイトレーシング加速構造などのシリアル化されたデータの、現在のデバイス／ドライバーとの互換性を報告します。",
+  "Parameters": {
+    "SerializedDataType": "直列化されたデータのタイプです。詳しくは<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_serialized_data_type\">D3D12_SERIALIZED_DATA_TYPE</a>をご覧ください。",
+    "pIdentifierToCheck": "ドライバで確認するシリアルデータのヘッダからの識別子。詳しくは<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_serialized_data_driver_matching_identifier\">D3D12_SERIALIZED_DATA_DRIVER_MATCHING_IDENTIFIER</a>をご覧ください。"
+  },
+  "Fields": {},
+  "ReturnValue": "返された互換性ステータス。詳しくは<a href=\"../d3d12/ne-d3d12-d3d12_driver_matching_identifier_status.md\">D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS</a>をご覧ください。"
+}
