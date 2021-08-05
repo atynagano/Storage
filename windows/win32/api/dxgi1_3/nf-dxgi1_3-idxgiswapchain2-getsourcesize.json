@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT GetSourceSize(\n  [Out] uint* pWidth,\n  [Out] uint* pHeight,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getsourcesize",
+  "Description": "スワップチェーンに使用されるソース領域を取得します。",
+  "Parameters": {
+    "pWidth": "スワップチェーンのソース領域の現在の幅です。この値の範囲は、1からスワップチェーン全体の幅までです。",
+    "pHeight": "スワップチェーンのソース領域の現在の高さです。この値の範囲は、1からスワップチェーン全体の高さまでです。"
+  },
+  "Fields": {},
+  "ReturnValue": "このメソッドは、「<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>」のトピックで説明されているエラーコードを返すことがあります。"
+}
