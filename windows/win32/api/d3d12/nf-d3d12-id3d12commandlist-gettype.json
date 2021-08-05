@@ -1,0 +1,8 @@
+{
+  "Syntax": "D3D12_COMMAND_LIST_TYPE GetType();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12commandlist-gettype",
+  "Description": "direct、bundle、compute、copyなど、コマンドリストのタイプを取得します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/api/d3d12/ne-d3d12-d3d12_command_list_type\">D3D12_COMMAND_LIST_TYPE</a></b>\n\nこのメソッドは、コマンドリストのタイプを返します。\n<a href=\"/windows/desktop/api/d3d12/ne-d3d12-d3d12_command_list_type\">D3D12_COMMAND_LIST_TYPE</a>列挙定数として返します。\ndirect、bundle、compute、copyなどがあります。"
+}
