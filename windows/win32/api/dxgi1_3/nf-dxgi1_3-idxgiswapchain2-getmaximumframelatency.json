@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT GetMaximumFrameLatency(\n  [Out] uint* pMaxLatency,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getmaximumframelatency",
+  "Description": "スワップチェーンがレンダリングのためにキューに入れることができるフレームの数を取得します。",
+  "Parameters": {
+    "pMaxLatency": "スワップチェーンにキューイングされるバックバッファフレームの最大数です。この値はデフォルトでは1ですが、シーンの描画に1回の垂直方向のリフレッシュ（通常は約16ms）よりも時間がかかる場合は、2に設定する必要があります。"
+  },
+  "Fields": {},
+  "ReturnValue": "成功した場合はS_OKを、そうでない場合は<a href=\"/windows/desktop/direct3d9/d3derr\">D3DERR</a>列挙型の以下のメンバーのいずれかを返します。\n\n<ul><li><b>D3DERR_DEVICELOST</b></li><li><b>D3DERR_DEVICEREMOVED</b></li><li><b>D3DERR_DRIVERINTERNALERROR</b></li><li><b>D3DERR_INVALIDCALL</b></li><li><b>D3DERR_OUTOFVIDEOMEMORY</b></li></ul>"
+}
