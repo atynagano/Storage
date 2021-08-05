@@ -1,0 +1,15 @@
+{
+  "Syntax": "void CopyTileMappings(\n  [In] ID3D12Resource pDstResource,\n  [In][Const] D3D12_TILED_RESOURCE_COORDINATE* pDstRegionStartCoordinate,\n  [In] ID3D12Resource pSrcResource,\n  [In][Const] D3D12_TILED_RESOURCE_COORDINATE* pSrcRegionStartCoordinate,\n  [In][Const] D3D12_TILE_REGION_SIZE* pRegionSize,\n  [In] D3D12_TILE_MAPPING_FLAGS Flags,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12commandqueue-copytilemappings",
+  "Description": "コピー元の予約済みリソースからコピー先の予約済みリソースにマッピングをコピーします。",
+  "Remarks": "\n<b>CopyTileMappings</b>を使用して、ある予約済みリソースから別の予約済みリソースへのタイルマッピングをコピーし、リソースマッピングを複製したり、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-updatetilemappings\">UpdateTileMappings</a>を使用して変更する前に新しいマッピングを初期化したりします。\n\n<b>CopyTileMappings</b>は、予約されたリソース内や予約されたリソース間でマッピングを移動させるような作業、例えばタイルのスクロールなどに役立ちます。\nコピー元とコピー先の領域が重なることがあります。このような場合のコピー結果は、コピー元を一時的な場所に保存し、そこからコピー先に書き込んだようなものです。\nに保存され、そこからデスティネーションに書き込まれたかのようになります。\n\n\nデスティネーション領域とソース領域がそれぞれ完全にリソースに収まっている必要があります。そうでない場合、動作は未定義で、デバッグレイヤはエラーを出します。\n\n",
+  "Parameters": {
+    "pDstResource": "宛先となる予約済みリソースへのポインタです。",
+    "pDstRegionStartCoordinate": "へのポインタです。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate\">D3D12_TILED_RESOURCE_COORDINATE</a>構造体へのポインタ。",
+    "pSrcResource": "ソースの予約済みリソースへのポインタです。",
+    "pSrcRegionStartCoordinate": "ソース予約リソースの開始座標を記述した<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate\">D3D12_TILED_RESOURCE_COORDINATE</a>構造体へのポインタ。",
+    "pRegionSize": "予約領域のサイズを記述した<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_region_size\">D3D12_TILE_REGION_SIZE</a>構造体へのポインタです。",
+    "Flags": "<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_tile_mapping_flags\">D3D12_TILE_MAPPING_FLAGS</a>の一人のメンバー。"
+  },
+  "Fields": {}
+}
