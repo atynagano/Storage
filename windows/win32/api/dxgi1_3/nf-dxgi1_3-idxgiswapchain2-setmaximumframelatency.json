@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT SetMaximumFrameLatency(\n  [In] uint MaxLatency,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_3/nf-dxgi1_3-idxgiswapchain2-setmaximumframelatency",
+  "Description": "スワップチェーンがレンダリングのためにキューに入れることができるフレーム数を設定します。",
+  "Parameters": {
+    "MaxLatency": "スワップチェーンにキューイングされるバックバッファフレームの最大数です。この値は、デフォルトでは1です。"
+  },
+  "Fields": {},
+  "ReturnValue": "成功した場合はS_OKを、デバイスが削除された場合はDXGI_ERROR_DEVICE_REMOVEDを返します。"
+}
