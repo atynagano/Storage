@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT GetHwnd(\n  [Out] HWND* pHwnd,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-gethwnd",
+  "Description": "このswap-chainオブジェクトの基礎となるHWNDを取得します。",
+  "Parameters": {
+    "pHwnd": "スワップチェインオブジェクトの<a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">HWND</a>を受け取る変数へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "成功した場合はS_OK、失敗した場合はエラーコードを返します。エラーコードの一覧は、<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>を参照してください。\n\n<i>pHwnd</i>が<b>NULL</b>を受け取った場合（つまり、スワップチェーンが<a href=\"/windows/desktop/WinProg/windows-data-types\">HWND</a>ベースでない場合）、<b>GetHwnd</b>は<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_INVALID_CALL</a>を返します。"
+}
