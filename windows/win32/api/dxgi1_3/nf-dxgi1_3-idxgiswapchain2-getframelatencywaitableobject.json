@@ -1,0 +1,8 @@
+{
+  "Syntax": "HANDLE GetFrameLatencyWaitableObject();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getframelatencywaitableobject",
+  "Description": "DXGIアダプタが新しいフレームの提示を終了したことを知らせるウェイタブルハンドルを返します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "待機中のオブジェクトへのハンドル、またはスワップチェーンが<a href=\"/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag\">DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT</a>で作成されていない場合はNULL。"
+}
