@@ -1,0 +1,11 @@
+{
+  "Syntax": "void ExecuteCommandLists(\n  [In] uint NumCommandLists,\n  [In][NativeArrayInfo (CountParamIndex = 0)] ID3D12CommandList* ppCommandLists,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12commandqueue-executecommandlists",
+  "Description": "コマンドリストの配列を実行に移す。",
+  "Remarks": "\nExecuteCommandLists**を連続して2回呼び出すと（同じスレッド、または異なるスレッドから）、1つ目のワークロード（A）が2つ目のワークロード（B）より先に終了することが保証されます。2つのコマンド・リストで**ExecuteCommandLists**を呼び出すと、ドライバは2つのコマンド・リストをマージすることができ、2つ目のコマンド・リスト（D）が1つ目の作業（C）のすべての作業が終了する前に作業の実行を開始することができます。具体的には、アプリケーションがAとBの間にフェンス信号や待機を挿入することが許可されていますが、ドライバーはこれを見ることができないため、ドライバーはフェンス操作の前にAのすべてが完了していることを確認する必要があります。APIへの1回の呼び出しではそのような機会はないので、ドライバーはそのシナリオを最適化することができます。\n\nドライバは、提出されたコマンド・リストに自由にパッチを当てることができます。呼び出し側のアプリケーションは、グラフィックス・プロセッシング・ユニット（GPU）が、以前の実行で提出されたコマンド・リストのいずれも現在読み込んでいないことを確認する責任があります。\n\nアプリケーションは、GPUへのコマンド送信に関連する固定費を削減するために、コマンドリストの実行をまとめて行うことが推奨されます。\n\n",
+  "Parameters": {
+    "NumCommandLists": "実行するコマンドリストの数です。",
+    "ppCommandLists": "実行する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandlist\">ID3D12CommandList</a>コマンドリストの配列です。"
+  },
+  "Fields": {}
+}
