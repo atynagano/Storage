@@ -1,0 +1,8 @@
+{
+  "Syntax": "HRESULT Reset();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12commandallocator-reset",
+  "Description": "コマンドアロケータに関連付けられているメモリを再利用することを示す。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、コマンド・アロケータを参照しているアクティブに記録されているコマンド・リストがある場合、<b>E_FAIL</b>を返します。また、この場合、デバッグ層はエラーを発行します。\nその他の可能な戻り値については、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>を参照してください。"
+}
