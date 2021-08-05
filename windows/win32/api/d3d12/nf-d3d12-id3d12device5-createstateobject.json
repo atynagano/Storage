@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CreateStateObject(\n  [In][Const] D3D12_STATE_OBJECT_DESC* pDesc,\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppStateObject,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device5-createstateobject",
+  "Description": "ID3D12StateObject](/windows/win32/api/d3d12/nn-d3d12-id3d12stateobject)を作成します。",
+  "Parameters": {
+    "pDesc": "作成するステートオブジェクトの説明です。",
+    "riid": "作成するインターフェースのGUIDです。<i>__uuidof(ID3D12StateObject)</i>を使用してください。",
+    "ppStateObject": "返されたステートオブジェクト。"
+  },
+  "Fields": {},
+  "ReturnValue": "成功した場合はS_OKを、そうでない場合は以下のいずれかの値を返します。\n\n<ul><li>E_INVALIDARG if one of the input parameters is invalid.</li><li>E_OUTOFMEMORY if sufficient memory is not available to create the handle.</li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a> topic.\n              </li></ul>"
+}
