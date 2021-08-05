@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT GetContainingOutput(\n  [Out][ComOutPtr] IDXGIOutput* ppOutput,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi/nf-dxgi-idxgiswapchain-getcontainingoutput",
+  "Description": "対象となるウィンドウのクライアント領域の大部分を含む出力（表示モニター）を取得します。",
+  "Parameters": {
+    "ppOutput": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgioutput\">IDXGIOutput</a>**</b>\n\n出力インターフェースへのポインタです（<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgioutput\">IDXGIOutput</a>参照）。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n次のいずれかを返す<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>."
+}
