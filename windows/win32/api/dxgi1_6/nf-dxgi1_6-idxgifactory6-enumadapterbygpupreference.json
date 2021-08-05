@@ -1,0 +1,13 @@
+{
+  "Syntax": "HRESULT EnumAdapterByGpuPreference(\n  [In] uint Adapter,\n  [In] DXGI_GPU_PREFERENCE GpuPreference,\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppvAdapter,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_6/nf-dxgi1_6-idxgifactory6-enumadapterbygpupreference",
+  "Description": "与えられたGPUの優先順位に基づいて、グラフィックアダプタを列挙します。",
+  "Parameters": {
+    "Adapter": "型: <b>UINT</b>\n\n列挙するアダプタのインデックスです。例えば、<b>DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE</b>が指定されている場合、最も性能の高いアダプタがインデックス0、2番目に高いアダプタがインデックス1、というように、インデックスは<i>GpuPreference</i>で指定された優先順位の順になります。",
+    "GpuPreference": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/api/dxgi1_6/ne-dxgi1_6-dxgi_gpu_preference\">DXGI_GPU_PREFERENCE</a></b>\n\nアプリのGPU環境設定です。",
+    "riid": "型: <b>REFIID</b>\n\n<i>ppvAdapter</i>パラメータが参照する<a href=\"https://docs.microsoft.com/windows/win32/api/dxgi1_6/nn-dxgi1_6-idxgifactory6\">IDXGIAdapter</a>オブジェクトのグローバルに一意な識別子（GUID）です。",
+    "ppvAdapter": "型: <b>void**</b>\n\nアダプターへの<a href=\"https://docs.microsoft.com/windows/win32/api/dxgi/nn-dxgi-idxgiadapter\">IDXGIAdapter</a>インターフェース・ポインターのアドレスです。\n\nこのパラメータはNULLであってはなりません。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b>HRESULT</b>\n\n成功した場合は<b>S_OK</b>、そうでない場合はエラーコードを返します。エラーコードの一覧は、<a href=\"/windows/win32/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>を参照してください。"
+}
