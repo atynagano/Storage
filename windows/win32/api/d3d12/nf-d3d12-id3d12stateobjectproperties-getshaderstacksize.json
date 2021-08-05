@@ -1,0 +1,10 @@
+{
+  "Syntax": "ulong GetShaderStackSize(\n  [In][Const] PWSTR pExportName,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12stateobjectproperties-getshaderstacksize",
+  "Description": "HLSLでレイトレーシング・シェーダを呼び出すのに必要なスタックメモリの量を取得します。",
+  "Parameters": {
+    "pExportName": "スタックサイズを取得するためのステートオブジェクト内のシェーダーエントリポイントです。ヒットグループの場合、ヒットグループ内の個々のシェーダーは、構文を使用して指定する必要があります。\n\nhitGroupName::shaderType\n\nここで、<i>hitGroupName</i>はヒットグループのエントリポイント名、<i>shaderType</i>は以下のいずれかです。\n\n<ul><li>intersection</li><li>anyhit</li><li>closesthit</li></ul>\nこれらの値はすべて大文字と小文字を区別します。\n\n値の例としては\"myTreeLeafHitGroup::anyhit\"です。"
+  },
+  "Fields": {},
+  "ReturnValue": "シェーダーを呼び出すのに必要なスタックメモリの量（バイト）。シェーダーがステート・オブジェクト内で完全に解決されていない場合や、シェーダーが未知のものであったり、ヒット・グループのようにスタック・サイズが関係ないタイプのものである場合、戻り値は0xffffffとなります。32ビットの0xffffffという値がUINT64の戻り値に使われているのは、パイプライン全体のスタックサイズを計算する際に、他の値と合計されても悪い戻り値が失われないようにするためです。"
+}
