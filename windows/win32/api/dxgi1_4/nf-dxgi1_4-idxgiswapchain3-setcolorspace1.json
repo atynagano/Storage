@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT SetColorSpace1(\n  [In] DXGI_COLOR_SPACE_TYPE ColorSpace,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_4/nf-dxgi1_4-idxgiswapchain3-setcolorspace1",
+  "Description": "スワップチェーンで使用する色空間を設定します。",
+  "Parameters": {
+    "ColorSpace": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/dxgicommon/ne-dxgicommon-dxgi_color_space_type\">DXGI_COLOR_SPACE_TYPE</a></b>\n\n設定するカラースペースを指定する<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgicommon/ne-dxgicommon-dxgi_color_space_type\">DXGI_COLOR_SPACE_TYPE</a>形式の値です。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、成功すると<b>S_OK</b>を返しますが、<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>のトピックで説明されているエラーコードのいずれかを返します。"
+}
