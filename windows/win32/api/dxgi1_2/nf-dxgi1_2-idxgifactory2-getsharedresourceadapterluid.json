@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT GetSharedResourceAdapterLuid(\n  [In] HANDLE hResource,\n  [Out] LUID* pLuid,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgifactory2-getsharedresourceadapterluid",
+  "Description": "共有リソースオブジェクトが作成されたアダプタを識別します。",
+  "Parameters": {
+    "hResource": "共有リソース・オブジェクトのハンドルです。<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiresource1-createsharedhandle\">IDXGIResource1::CreateSharedHandle</a>メソッドはこのハンドルを返します。",
+    "pLuid": "アダプタを識別するローカルユニーク識別子(<a href=\"https://docs.microsoft.com/previous-versions/windows/hardware/drivers/ff549708(v=vs.85)\">LUID</a>)の値を受け取る変数へのポインタです。<b>LUID</b>はDxgi.hで定義されています。<b>LUID</b>は64ビットの値で、生成されたオペレーティングシステム上でのみ一意であることが保証されています。<b>LUID</b>の一意性は、OSを再起動するまで保証されます。"
+  },
+  "Fields": {},
+  "ReturnValue": "<b>GetSharedResourceAdapterLuid</b>が戻る。\n<ul><li>S_OK if it  identified the adapter.</li><li><a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_INVALID_CALL</a> if <i>hResource</i> is invalid.</li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a> topic.</li></ul>\n\n<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、<b>GetSharedResourceAdapterLuid</b>がE_NOTIMPLで失敗します。Windows7のPlatformUpdateについては、<a href=\"/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>を参照してください。"
+}
