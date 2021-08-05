@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT EnumWarpAdapter(\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppvAdapter,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_4/nf-dxgi1_4-idxgifactory4-enumwarpadapter",
+  "Description": "WARPレンダラーを使用するために、D3D12CreateDeviceに提供できるアダプタを提供します。",
+  "Parameters": {
+    "riid": "型: <b>REFIID</b>\n\n<i>ppvAdapter</i>パラメータが参照する<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiadapter\">IDXGIAdapter</a>オブジェクトのグローバルに一意な識別子（GUID）です。",
+    "ppvAdapter": "型: <b>void**</b>\n\nアダプタへの<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiadapter\">IDXGIAdapter</a>インターフェース・ポインタのアドレスです。\nこのパラメータはNULLであってはいけません。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n成功した場合はS_OK、失敗した場合はエラーコードを返します。\nエラーコードの一覧は，<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>を参照してください。\nDirect3D12リターンコード」も参照してください。"
+}
