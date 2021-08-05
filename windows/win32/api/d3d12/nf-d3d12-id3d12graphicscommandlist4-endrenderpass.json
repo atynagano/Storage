@@ -1,0 +1,7 @@
+{
+  "Syntax": "void EndRenderPass();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist4-endrenderpass",
+  "Description": "レンダリングパスの終了をマークします。",
+  "Parameters": {},
+  "Fields": {}
+}
