@@ -1,0 +1,12 @@
+{
+  "Syntax": "void ExecuteMetaCommand(\n  [In] ID3D12MetaCommand pMetaCommand,\n  [Optional][In][Const][MemorySize (BytesParamIndex = 2)] void* pExecutionParametersData,\n  [In] UIntPtr ExecutionParametersDataSizeInBytes,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist4-executemetacommand",
+  "Description": "指定されたメタコマンドの実行（または呼び出し）を、グラフィックスコマンドリストに記録します。",
+  "Parameters": {
+    "pMetaCommand": "初期化するメタコマンドを表す<b>ID3D12MetaCommand</b>へのポインタです。",
+    "pExecutionParametersData": "メタコマンドを実行するためのパラメータの値を含む定数構造体への任意のポインタです。",
+    "ExecutionParametersDataSizeInBytes": "<i>pExecutionParametersData</i>が指す構造体のサイズを含む<a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">SIZE_T</a>が設定されていれば、それ以外は0です。"
+  },
+  "Fields": {},
+  "ReturnValue": "このメソッドが成功した場合、<b xmlns:loc=\"http://microsoft.com/wdcml/l10n\">S_OK</b>を返します。それ以外の場合は、<b xmlns:loc=\"http://microsoft.com/wdcml/l10n\">HRESULT</b>のエラーコードを返します。"
+}
