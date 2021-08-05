@@ -1,0 +1,11 @@
+{
+  "Syntax": "void GetRaytracingAccelerationStructurePrebuildInfo(\n  [In][Const] D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS* pDesc,\n  [Out] D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO* pInfo,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device5-getraytracingaccelerationstructureprebuildinfo",
+  "Description": "加速器構造を構築するためのリソース要件をドライバーに問い合わせる。",
+  "Remarks": "\n入力加速度構造の記述は、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-buildraytracingaccelerationstructure\">BuildRaytracingAccelerationStructure</a>に入るものと同じです。この関数の結果、アプリケーションは、同じジオメトリを持つ<b>BuildRaytracingAccelerationStructure</b>に、適切な量の出力ストレージとスクラッチストレージを提供することができます。\n\nビルドは、ジオメトリ/インスタンスの数や、ジオメトリの頂点/indices/AABBの数が同じか小さいことを除いて、全体的に<b>GetAccelerationStructurePrebuildInfo</b>に渡されたのと同じ構成で行うこともできます。この場合、<b>GetRaytracingAccelerationStructurePrebuildInfo</b>に渡された元のサイズで報告されたストレージ要件は有効であり、ビルドが実際に消費する容量は少なくても多くはありません。これは、アプリのシナリオにおいて、加速構造のために保守的に大きなストレージを割り当てても問題ない場合に便利です。\n\nこの方法は、コマンドリストではなくデバイスインターフェースを使用しています。これは、実際の頂点データやインデックスデータなどを含むGPUメモリへのポインタを参照しなくても、ドライバがCPUから見える部分だけを見て、アクセラレーション構造の構築に必要なリソース要件を計算できる必要があるという仮定に基づいています。\n\n",
+  "Parameters": {
+    "pDesc": "加速構造の構築に関する説明。この構造体は<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-buildraytracingaccelerationstructure\">BuildRaytracingAccelerationStructure</a>と共有しています。詳細は<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_build_raytracing_acceleration_structure_inputs\">D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS</a>を参照してください。\n\n実装は、この構造体およびネストされた構造体のすべてのCPUパラメータを見ることができます。<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_raytracing_geometry_triangles_desc\">D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC</a>のオプションのトランスフォームのように、ポインタがNULLかどうかをチェックする以外は、GPU仮想アドレスを参照せずに検査/参照することはできません。言い換えると、加速構造体のリソース要件の計算は、実際のジオメトリデータ（頂点の位置など）には依存せず、むしろ三角形の数やインスタンスの数などの全体的なプロパティにのみ依存することができます。",
+    "pInfo": "クエリの結果です。"
+  },
+  "Fields": {}
+}
