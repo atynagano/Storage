@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT RegisterOcclusionStatusEvent(\n  [In] HANDLE hEvent,\n  [Out] uint* pdwCookie,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgifactory2-registerocclusionstatusevent",
+  "Description": "イベントシグナリングを利用して、オクルージョン状態の変化を通知するために登録します。",
+  "Parameters": {
+    "hEvent": "オクルージョンの状態変化の通知が発生したときにOSが設定するイベントオブジェクトのハンドル。<a href=\"https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-createeventa\">CreateEvent</a>または<a href=\"https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-openeventa\">OpenEvent</a>関数はこのハンドルを返す。",
+    "pdwCookie": "<i>hEvent</i>が指定した通知イベントの登録を解除するために、アプリケーションが<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-unregisterocclusionstatus\">IDXGIFactory2::UnregisterOcclusionStatus</a>メソッドに渡すことができるキー値へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "<b>RegisterOcclusionStatusEvent</b>が戻る。\n<ul><li>S_OK if the method successfully registered the event.</li><li>E_OUTOFMEMORY if memory is unavailable to complete the operation.</li><li><a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_INVALID_CALL</a>  if <i>hEvent</i> is not a valid handle or not an event handle. </li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a> topic.</li></ul>\n\n<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、<b>RegisterOcclusionStatusEvent</b>がE_NOTIMPLで失敗します。Windows7のPlatformUpdateについては、<a href=\"/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>を参照してください。"
+}
