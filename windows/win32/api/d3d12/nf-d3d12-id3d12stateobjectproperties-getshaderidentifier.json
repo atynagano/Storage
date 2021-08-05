@@ -1,0 +1,10 @@
+{
+  "Syntax": "void* GetShaderIdentifier(\n  [In][Const] PWSTR pExportName,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12stateobjectproperties-getshaderidentifier",
+  "Description": "シェーダレコードで使用可能なシェーダの一意の識別子を取得します。",
+  "Parameters": {
+    "pExportName": "識別子を取得するためのステートオブジェクト内のエントリポイント。"
+  },
+  "Fields": {},
+  "ReturnValue": "シェーダーの識別子へのポインタです。\n\nこのポインタが参照するデータは、その元となったステートオブジェクトが有効である限り、有効です。返されるデータのサイズは<a href=\"/windows/desktop/direct3d12/constants\">D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES</a>です。アプリケーションは、このデータをコピーしてキャッシュし、何度も取得する必要がある場合には、ステートオブジェクト内で検索するコストを回避する必要があります。この識別子は、GPUメモリ内のシェーダテーブル内のシェーダレコードで使用され、アプリケーションはこれを入力する必要があります。\n\nデータ自体がシェーダーをグローバルに識別するため、シェーダーが同じアソシエーションを持つ別の状態のオブジェクトに表示されても、あらゆるルートシグネチャと同様に、同じ識別子を持つことになります。\n\nシェーダーがステートオブジェクトに完全に解決されていない場合、戻り値は<b>nullptr</b>となります。"
+}
