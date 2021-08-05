@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT SetBackgroundColor(\n  [In][Const] DXGI_RGBA* pColor,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setbackgroundcolor",
+  "Description": "スワップチェーンの背景色を変更します。",
+  "Parameters": {
+    "pColor": "設定する背景色を指定する<a href=\"https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-rgba\">DXGI_RGBA</a>構造体へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "<b>SetBackgroundColor</b>が戻る。\n<ul><li>S_OK if it successfully set the background color.</li><li>E_INVALIDARG if the <i>pColor</i> parameter is incorrect, for example, <i>pColor</i> is NULL or any of the floating-point values of the members of <a href=\"/windows/desktop/direct3ddxgi/dxgi-rgba\">DXGI_RGBA</a> to which <i>pColor</i> points are outside the range from 0.0 through 1.0.</li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a> topic.</li></ul>\n\n<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、<b>SetBackgroundColor</b>がE_NOTIMPLで失敗します。Windows7のPlatformUpdateについては、<a href=\"/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>を参照してください。"
+}
