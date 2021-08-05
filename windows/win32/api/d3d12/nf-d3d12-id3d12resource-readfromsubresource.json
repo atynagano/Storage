@@ -1,0 +1,14 @@
+{
+  "Syntax": "HRESULT ReadFromSubresource(\n  [Out] void* pDstData,\n  [In] uint DstRowPitch,\n  [In] uint DstDepthPitch,\n  [In] uint SrcSubresource,\n  [Optional][In][Const] D3D12_BOX* pSrcBox,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12resource-readfromsubresource",
+  "Description": "CPUを使用してサブリソースからデータをコピーすることで、未定義のレイアウトを持つほとんどのテクスチャのコンテンツを読み取ることができます。",
+  "Parameters": {
+    "pDstData": "型: <b>void*</b>\n\nメモリ上の宛先データへのポインタです。",
+    "DstRowPitch": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nデスティネーションデータのある行から次の行までの距離。",
+    "DstDepthPitch": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nデスティネーションデータのあるデプススライスから次のデプススライスまでの距離。",
+    "SrcSubresource": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n読み込み先のサブリソースのインデックスを指定します。",
+    "pSrcBox": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_box\">D3D12_BOX</a>*</b>\n\nリソースデータをコピーする先のサブリソースの部分を定義するボックスへのポインタです。\nNULLの場合、データはオフセットなしでデスティネーションのサブリソースから読み込まれます。\nコピー先の寸法は、コピー先に合わせなければなりません（参照\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_box\">D3D12_BOX</a>).\n\n\nボックスが空の場合は、no-opになります。\nボックスは、上の値が下の値以上であるか、左の値が右の値以上であるか、前の値が後ろの値以上である場合、空になります。\nボックスが空の場合、このメソッドは何の操作も行いません。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>のいずれかを返します。"
+}
