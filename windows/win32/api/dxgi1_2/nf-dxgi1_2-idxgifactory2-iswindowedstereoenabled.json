@@ -1,0 +1,8 @@
+{
+  "Syntax": "BOOL IsWindowedStereoEnabled();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgifactory2-iswindowedstereoenabled",
+  "Description": "ステレオモードを使用するかどうかを決定します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "ステレオモードを使用するかどうかを示す。<b>TRUE</b>はステレオモードを使用できることを示し、それ以外は<b>FALSE</b>。\n\n<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、PlatformUpdateforWindows7で3D立体表示の動作が利用できないため、<b>IsWindowedStereoEnabled</b>は常にFALSEを返します。Windows7のPlatformUpdateについては、<a href=\"/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>を参照してください。"
+}
