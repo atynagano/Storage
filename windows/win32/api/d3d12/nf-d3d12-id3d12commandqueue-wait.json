@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT Wait(\n  [In] ID3D12Fence pFence,\n  [In] ulong Value,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12commandqueue-wait",
+  "Description": "GPU側の待機をキューに入れて、すぐに返します。GPU側の待機とは、指定されたフェンスが指定された値に達するか超えるまでGPUが待機することです。",
+  "Parameters": {
+    "pFence": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12fence\">ID3D12Fence</a>*</b>\n\n<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12fence\">ID3D12Fence</a>オブジェクトへのポインタです。",
+    "Value": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">UINT64</a></b>\n\nコマンドキューが、フェンスが到達するか超えるかを待っている値です。そのため、<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nf-d3d12-id3d12fence-getcompletedvalue\">ID3D12Fence::GetCompletedValue</a>が<i>Value</i>以上になると待機が終了します。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>のいずれかを返します。"
+}
