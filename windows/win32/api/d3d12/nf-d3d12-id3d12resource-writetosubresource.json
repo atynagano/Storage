@@ -1,0 +1,14 @@
+{
+  "Syntax": "HRESULT WriteToSubresource(\n  [In] uint DstSubresource,\n  [Optional][In][Const] D3D12_BOX* pDstBox,\n  [In][Const] void* pSrcData,\n  [In] uint SrcRowPitch,\n  [In] uint SrcDepthPitch,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12resource-writetosubresource",
+  "Description": "CPUを使用してデータをサブリソースにコピーすることで、レイアウトが定義されていないほとんどのテクスチャの内容をCPUで変更することができます。",
+  "Parameters": {
+    "DstSubresource": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nサブリソースのインデックスを指定します。",
+    "pDstBox": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_box\">D3D12_BOX</a>*</b>\n\nリソースデータをコピーする先のサブリソースの部分を定義するボックスへのポインタです。\nNULLの場合、データはオフセットなしでデスティネーションのサブリソースに書き込まれます。\nコピー元の寸法はコピー先に合わなければなりません（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_box\">D3D12_BOX</a>参照）。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_box\">D3D12_BOX</a>).\n\n\n空のボックスでは、ノー・オペになります。\nボックスが空なのは、上の値が下の値以上の場合、または左の値が右の値以上の場合です。\n\t\t\t\t前方の値が後方の値以上である場合。\nボックスが空の場合、このメソッドは何の操作も行いません。",
+    "pSrcData": "型: <b>const void*</b>\n\nメモリ上のソースデータへのポインタです。",
+    "SrcRowPitch": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nソースデータのある行から次の行までの距離。",
+    "SrcDepthPitch": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nソースデータのあるデプススライスから次のデプススライスまでの距離。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>の1つを返します。"
+}
