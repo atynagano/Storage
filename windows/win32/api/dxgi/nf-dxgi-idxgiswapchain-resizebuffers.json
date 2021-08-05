@@ -1,0 +1,14 @@
+{
+  "Syntax": "HRESULT ResizeBuffers(\n  [In] uint BufferCount,\n  [In] uint Width,\n  [In] uint Height,\n  [In] DXGI_FORMAT NewFormat,\n  [In] uint SwapChainFlags,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi/nf-dxgi-idxgiswapchain-resizebuffers",
+  "Description": "スワップチェーンのバックバッファのサイズ、フォーマット、バッファの数を変更します。これは、アプリケーションウィンドウのサイズが変更されたときに呼び出される必要があります。",
+  "Parameters": {
+    "BufferCount": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nスワップチェーンに含まれるバッファの数（バックバッファとフロントバッファのすべてを含む）。\nこの値は、スワップチェーンを作成したときのバッファ数とは異なる場合があります。\nこの値は<b>DXGI_MAX_SWAP_CHAIN_BUFFERS</b>より大きくなることはありません。\nスワップチェーン内の既存のバッファ数を維持するには、この数値を0に設定します。\nフリッププレゼンテーションモデルでは、バッファの数を2つ以下に指定することはできません。",
+    "Width": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nバックバッファの新しい幅です。\nゼロを指定した場合、DXGIはターゲットウィンドウのクライアント領域の幅を使用します。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition\">IDXGIFactory2::CreateSwapChainForComposition</a>メソッドを呼び出してコンポジションサーフェスのスワップチェーンを作成した場合、幅をゼロに指定することはできません。",
+    "Height": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nバックバッファの新しい高さです。\nゼロを指定した場合、DXGIはターゲットウィンドウのクライアント領域の高さを使用します。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition\">IDXGIFactory2::CreateSwapChainForComposition</a>メソッドを呼び出してコンポジションサーフェスのスワップチェーンを作成した場合、高さをゼロに指定することはできません。",
+    "NewFormat": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format\">DXGI_FORMAT</a></b>\n\nバックバッファの新しいフォーマットを表す<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format\">DXGI_FORMAT</a>型の値です。\nこの値を<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format\">DXGI_FORMAT_UNKNOWN</a>に設定すると、バックバッファの既存のフォーマットが維持されます。\nフリッププレゼンテーションモデルは、ビットブロックトランスファー（bitblt）モデルよりも制限されたフォーマットのセットをサポートします。",
+    "SwapChainFlags": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_chain_flag\">DXGI_SWAP_CHAIN_FLAG</a>型の値をビットごとにOR演算して組み合わせたもの。\n結果として得られる値は、スワップチェーンの動作に関するオプションを指定するものです。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n成功した場合はS_OK、失敗した場合はエラーコードを返します。\nエラーコードの一覧は、<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>を参照してください。"
+}
