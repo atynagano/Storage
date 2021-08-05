@@ -1,0 +1,12 @@
+{
+  "Syntax": "void CopyRaytracingAccelerationStructure(\n  [In] ulong DestAccelerationStructureData,\n  [In] ulong SourceAccelerationStructureData,\n  [In] D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE Mode,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist4-copyraytracingaccelerationstructure",
+  "Description": "指定された変換を適用しながら、ソースの加速構造をデスティネーション・メモリにコピーします。",
+  "Remarks": "\nレイトレーシングの加速構造には内部ポインタが含まれ、デバイスに依存した不透明なレイアウトになっていることがあるため、それらをコピーしたり、その他の方法で操作したりするには、ドライバが要求された操作を処理できるように、専用のAPIが必要です。\n\nこのメソッドは、GraphicsやComputeのコマンドリストからは呼び出せますが、Bundleからは呼び出せません。\n\n",
+  "Parameters": {
+    "DestAccelerationStructureData": "送信先のメモリです。必要なサイズは、指定された<i>Mode</i>に対して必要であれば、事前に<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-emitraytracingaccelerationstructurepostbuildinfo\">EmitRaytracingAccelerationStructurePostbuildInfo</a>を呼び出すことで判明します。\n\nデスティネーションの開始アドレスは、<i>Mode</i>の指定にかかわらず、<a href=\"https://docs.microsoft.com/windows/desktop/direct3d12/constants\">D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BYTE_ALIGNMENT</a>として定義される256バイトにアラインされなければなりません。\n\nデスティネーションのメモリ範囲がソースと重ならないようにしてください。そうでない場合、結果は不定です。\n\n指し示されたメモリがどのようなリソース状態でなければならないかは、<i>Mode</i>パラメータに依存します。詳しくは<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_raytracing_acceleration_structure_copy_mode\">D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE</a>をご覧ください。",
+    "SourceAccelerationStructureData": "指定された<i>Mode</i>に基づいて、コピー／変換する加速構造体などのデータのアドレスです。データは変更されずに使用できます。この操作では、<i>SourceAccelerationStructureData</i>が指すデータのみがコピーされ、ソース・データが指す可能性のある加速構造などの他のデータはコピーされません。例えば、トップレベルの加速構造の場合、それが指し示すボトムレベルの加速構造は操作ではコピーされません。\n\nソースメモリーは、<i>Mode</i>の指定にかかわらず、<a href=\"https://docs.microsoft.com/windows/desktop/direct3d12/constants\">D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BYTE_ALIGNMENT</a>と定義される256バイトにアラインされている必要があります。\n\n指し示されたメモリがどのようなリソース状態でなければならないかは、<i>Mode</i>パラメータに依存します。詳しくは<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_raytracing_acceleration_structure_copy_mode\">D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE</a>をご覧ください。",
+    "Mode": "実行するコピー操作の種類です。詳しくは<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_raytracing_acceleration_structure_copy_mode\">D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE</a>をご覧ください。"
+  },
+  "Fields": {}
+}
