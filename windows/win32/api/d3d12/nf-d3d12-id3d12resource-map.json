@@ -8,5 +8,5 @@
     "ppData": "型: <b><b>void</b>**</b>\n\nリソースデータへのポインタを受信するメモリブロックへのポインタです。\n\nNULLポインタは有効で、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-writetosubresource\">WriteToSubresource</a>などのメソッドでCPUの仮想アドレス範囲をキャッシュするのに便利です。<i>ppData</i>がNULLでない場合、返されるポインタは<i>pReadRange</i>のどの値によってもオフセットされることはありません。"
   },
   "Fields": {},
-  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>のいずれかを返します。"
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>の1つを返します。"
 }
