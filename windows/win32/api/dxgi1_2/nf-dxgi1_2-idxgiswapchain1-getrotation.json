@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT GetRotation(\n  [Out] DXGI_MODE_ROTATION* pRotation,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-getrotation",
+  "Description": "スワップチェーンのバックバッファの回転を取得する。",
+  "Parameters": {
+    "pRotation": "スワップチェーンのバックバッファの回転を指定する<a href=\"https://docs.microsoft.com/previous-versions/windows/desktop/legacy/bb173065(v=vs.85)\">DXGI_MODE_ROTATION</a>型の値を受け取る変数へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "成功した場合はS_OK、失敗した場合はエラーコードを返します。エラーコードの一覧は、<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>を参照してください。\n\n<b>Platform Update for Windows\u00A07:\u00A0\u00A0</b><a href=\"https://support.microsoft.com/help/2670838\">Platform Update for Windows\u00A07</a>がインストールされているWindows7またはWindowsServer2008R2では、<b>GetRotation</b>がDXGI_ERROR_INVALID_CALLで失敗します。Windows7のPlatformUpdateの詳細については、<a href=\"/windows/desktop/direct3darticles/platform-update-for-windows-7\">Platform Update for Windows 7</a>を参照してください。"
+}
