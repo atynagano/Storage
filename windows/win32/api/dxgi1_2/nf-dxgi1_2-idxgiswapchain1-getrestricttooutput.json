@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT GetRestrictToOutput(\n  [Out] IDXGIOutput* ppRestrictToOutput,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-getrestricttooutput",
+  "Description": "現在の操作内容を制限できる出力（表示モニター）を取得します。",
+  "Parameters": {
+    "ppRestrictToOutput": "restrict-to出力用の<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgioutput\">IDXGIOutput</a>インターフェースへのポインタを受け取るバッファへのポインタです。アプリケーションは、<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforhwnd\">IDXGIFactory2::CreateSwapChainForHwnd</a>、<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow\">IDXGIFactory2::CreateSwapChainForCoreWindow</a>、または<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition\">IDXGIFactory2::CreateSwapChainForComposition</a>メソッドを呼び出す際に、このポインタを<b>IDXGIOutput</b>に渡してスワップチェーンを作成します。"
+  },
+  "Fields": {},
+  "ReturnValue": "restrict-to出力の取得に成功した場合はS_OKを、そうでない場合はポインタが無効な場合にE_INVALIDARGを返します。"
+}
