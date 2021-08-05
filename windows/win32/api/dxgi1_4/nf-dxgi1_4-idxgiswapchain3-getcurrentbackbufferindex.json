@@ -1,0 +1,8 @@
+{
+  "Syntax": "uint GetCurrentBackBufferIndex();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_4/nf-dxgi1_4-idxgiswapchain3-getcurrentbackbufferindex",
+  "Description": "スワップチェーンの現在のバックバッファのインデックスを取得します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n現在のバックバッファのインデックスを返します。"
+}
