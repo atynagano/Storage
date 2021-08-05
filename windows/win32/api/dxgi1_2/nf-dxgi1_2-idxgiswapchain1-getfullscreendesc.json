@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT GetFullscreenDesc(\n  [Out] DXGI_SWAP_CHAIN_FULLSCREEN_DESC* pDesc,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_2/nf-dxgi1_2-idxgiswapchain1-getfullscreendesc",
+  "Description": "フルスクリーンのスワップチェーンの説明を取得します。",
+  "Parameters": {
+    "pDesc": "フルスクリーンのスワップチェーンを記述した<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_fullscreen_desc\">DXGI_SWAP_CHAIN_FULLSCREEN_DESC</a>構造体へのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "<b>GetFullscreenDesc</b>が戻る。\n<ul><li>S_OK if it successfully retrieved the description of the full-screen swap chain.</li><li><a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR_INVALID_CALL</a>  for non-<a href=\"/windows/desktop/WinProg/windows-data-types\">HWND</a> swap chains or if <i>pDesc</i> is <b>NULL</b>.</li><li>Possibly other error codes that are described in the <a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a> topic. </li></ul>"
+}
