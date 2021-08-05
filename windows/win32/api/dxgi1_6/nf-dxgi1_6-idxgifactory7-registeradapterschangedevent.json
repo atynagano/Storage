@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT RegisterAdaptersChangedEvent(\n  [In] HANDLE hEvent,\n  [Out] uint* pdwCookie,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_6/nf-dxgi1_6-idxgifactory7-registeradapterschangedevent",
+  "Description": "アダプタの列挙状態が変化するたびに、変化の通知を受け取るために登録します。",
+  "Parameters": {
+    "hEvent": "イベントオブジェクトへのハンドルです。",
+    "pdwCookie": "登録されているイベントのキーとなる値です。"
+  },
+  "Fields": {},
+  "ReturnValue": "成功した場合は<b>S_OK</b>、そうでない場合はエラーコードを返します。"
+}
