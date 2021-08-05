@@ -1,0 +1,12 @@
+{
+  "Syntax": "void BuildRaytracingAccelerationStructure(\n  [In][Const] D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC* pDesc,\n  [In] uint NumPostbuildInfoDescs,\n  [Optional][In][Const][NativeArrayInfo (CountParamIndex = 1)] D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_DESC* pPostbuildInfoDescs,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist4-buildraytracingaccelerationstructure",
+  "Description": "GPU上でレイトレーシング・アクセラレーション・ストラクチャー・ビルドを実行し、オプションとしてビルド後の情報をビルド直後に出力します。",
+  "Remarks": "\nこのメソッドは、GraphicsやComputeのコマンドリストからは呼び出せますが、Bundleからは呼び出せません。\n\nポストビルド情報は、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist4-emitraytracingaccelerationstructurepostbuildinfo\">EmitRaytracingAccelerationStructurePostbuildInfo</a>を呼び出すことで、すでにビルドされた加速構造とは別に取得することもできます。ビルドと同時にポストビルド情報を生成することの利点は、ビルドが完了してからポストビルド情報を要求するまでの間にバリアが必要ないことです。\n\n",
+  "Parameters": {
+    "pDesc": "構築する加速構造の説明",
+    "NumPostbuildInfoDescs": "<i>pPostbuildInfoDescs</i>配列のサイズ。ビルド後の情報が必要ない場合は、0に設定します。",
+    "pPostbuildInfoDescs": "オプションの配列で、構築された加速構造のプロパティを説明する構築後の情報を生成するための説明文を指定します。"
+  },
+  "Fields": {}
+}
