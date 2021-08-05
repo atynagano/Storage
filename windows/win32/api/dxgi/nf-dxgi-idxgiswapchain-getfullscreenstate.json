@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT GetFullscreenState(\n  [Optional][Out] BOOL* pFullscreen,\n  [Optional][Out][ComOutPtr] IDXGIOutput* ppTarget,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi/nf-dxgi-idxgiswapchain-getfullscreenstate",
+  "Description": "フルスクリーンモードに関連する状態を取得します。",
+  "Parameters": {
+    "pFullscreen": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">BOOL</a>*</b>\n\nのいずれかであるブール値へのポインタです。\n\n<ul><li><b>TRUE</b> if the swap chain is in full-screen mode</li><li><b>FALSE</b> if the swap chain is in windowed mode</li></ul>",
+    "ppTarget": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgioutput\">IDXGIOutput</a>**</b>\n\nモードがフルスクリーンの場合は出力対象（<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgioutput\">IDXGIOutput</a>参照）へのポインタ、それ以外の場合は<b>NULL</b>。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n次のいずれかを返す<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>."
+}
