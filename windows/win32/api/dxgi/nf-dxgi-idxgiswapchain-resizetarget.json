@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT ResizeTarget(\n  [In][Const] DXGI_MODE_DESC* pNewTargetParameters,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi/nf-dxgi-idxgiswapchain-resizetarget",
+  "Description": "出力ターゲットのサイズを変更します。",
+  "Parameters": {
+    "pNewTargetParameters": "型: <b>const <a href=\"https://docs.microsoft.com/previous-versions/windows/desktop/legacy/bb173064(v=vs.85)\">DXGI_MODE_DESC</a>*</b>\n\nモードを記述した<a href=\"https://docs.microsoft.com/previous-versions/windows/desktop/legacy/bb173064(v=vs.85)\">DXGI_MODE_DESC</a>構造体へのポインタで、ターゲットの新しい幅、高さ、フォーマット、リフレッシュレートを指定します。\nフォーマットが<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format\">DXGI_FORMAT_UNKNOWN</a>の場合、<b>ResizeTarget</b>は既存のフォーマットを使用します。この方法はスレッドセーフではないため、スワップチェーンがフルスクリーンモードの場合にのみ、<b>DXGI_FORMAT_UNKNOWN</b>を使用することをお勧めします。\nこの方法はスレッドセーフではないため"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n成功または失敗を示すコードを返します。このAPIが呼び出されたときに、フルスクリーンモードとウィンドウモードの切り替えが行われていた場合、<b>DXGI_STATUS_MODE_CHANGE_IN_PROGRESS</b>が返されます。\n<b>DXGI_STATUS_MODE_CHANGE_IN_PROGRESS</b>が返されます。その他のDXGIエラーコードについては<a href=\"/windows/desktop/direct3ddxgi/dxgi-error\">DXGI_ERROR</a>を参照してください。"
+}
