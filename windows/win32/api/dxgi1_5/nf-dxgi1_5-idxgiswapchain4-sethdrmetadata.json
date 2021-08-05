@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT SetHDRMetaData(\n  [In] DXGI_HDR_METADATA_TYPE Type,\n  [In] uint Size,\n  [Optional][In][NativeArrayInfo (CountParamIndex = 1)] void* pMetaData,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_5/nf-dxgi1_5-idxgiswapchain4-sethdrmetadata",
+  "Description": "この方法では、HDR（High Dynamic Range）とWCG（Wide Color Gamut）のヘッダーメタデータを設定します。",
+  "Parameters": {
+    "Type": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_5/ne-dxgi1_5-dxgi_hdr_metadata_type\">DXGI_HDR_METADATA_TYPE</a></b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_5/ne-dxgi1_5-dxgi_hdr_metadata_type\">DXGI_HDR_METADATA_TYPE</a>列挙の1つのメンバーを指定します。",
+    "Size": "型: <b>UINT</b>\n\n<i>pMetaData</i>のサイズをバイト単位で指定します。",
+    "pMetaData": "型: <b>void*</b>\n\nメタデータが存在する場合は、それを参照するボイドポインタを指定します。<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgi1_5/ns-dxgi1_5-dxgi_hdr_metadata_hdr10\">DXGI_HDR_METADATA_HDR10</a>構造体を参照してください。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、HRESULTの成功またはエラーコードを返します。"
+}
