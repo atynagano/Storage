@@ -1,0 +1,8 @@
+{
+  "Syntax": "ulong GetGPUVirtualAddress();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12resource-getgpuvirtualaddress",
+  "Description": "このメソッドは、バッファリソースのGPU仮想アドレスを返します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b>D3D12_GPU_VIRTUAL_ADDRESS</b>\n\nこのメソッドは、GPU仮想アドレスを返します。\nD3D12_GPU_VIRTUAL_ADDRESSは、UINT64の同義語として型定義されています。"
+}
