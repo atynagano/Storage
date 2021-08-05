@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT UnregisterAdaptersChangedEvent(\n  [In] uint dwCookie,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//dxgi1_6/nf-dxgi1_6-idxgifactory7-unregisteradapterschangedevent",
+  "Description": "アダプタの列挙状態が変化したときに通知を受け取らないように、イベントの登録を解除します。",
+  "Parameters": {
+    "dwCookie": "登録解除するイベントのキーとなる値です。"
+  },
+  "Fields": {},
+  "ReturnValue": "成功した場合は<b>S_OK</b>、そうでない場合はエラーコードを返します。"
+}
