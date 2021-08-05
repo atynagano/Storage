@@ -1,0 +1,8 @@
+{
+  "Syntax": "ulong GetCompletedValue();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12fence-getcompletedvalue",
+  "Description": "フェンスの現在の値を取得します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/WinProg/windows-data-types\">UINT64</a></b>\n\nフェンスの現在の値を返します。デバイスが削除されている場合は、戻り値は<b>UINT64_MAX</b>になります。"
+}
