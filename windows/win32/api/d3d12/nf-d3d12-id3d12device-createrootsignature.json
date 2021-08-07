@@ -3,7 +3,7 @@
   "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createrootsignature",
   "Description": "ルート署名レイアウトを作成します。",
   "Parameters": {
-    "nodeMask": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">UINT</a></b>\n\n単一のGPU動作の場合は、0を設定します。複数のGPUノードがある場合は、ルートシグネチャを適用するノード（デバイスの物理アダプタ）を特定するためのビットを設定します。\nマスクの各ビットは、1つのノードに対応します。\n<a href=\"https://docs.microsoft.com/windows/win32/direct3d12/multi-engine\">Multi-adapter systems</a>を参照してください。",
+    "nodeMask": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">UINT</a></b>\n\n単一のGPU動作の場合は、0を設定します。複数のGPUノードがある場合は、ルートシグネチャを適用するノード（デバイスの物理アダプタ）を識別するためのビットを設定します。\nマスクの各ビットは、1つのノードに対応します。\n<a href=\"https://docs.microsoft.com/windows/win32/direct3d12/multi-engine\">Multi-adapter systems</a>を参照してください。",
     "pBlobWithRootSignature": "型: <b>const <a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">void</a>*</b>\n\nシリアル化された署名のソースデータへのポインタです。",
     "blobLengthInBytes": "型: <b><a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">SIZE_T</a></b>\n\n<i>pBlobWithRootSignature</i>が指すメモリブロックのサイズをバイト数で表します。",
     "riid": "型: <b><b>REFIID</b></b>\n\nルート署名インターフェースのグローバルに一意な識別子（<b>GUID</b>）。備考を参照してください。\n入力パラメータです。",
