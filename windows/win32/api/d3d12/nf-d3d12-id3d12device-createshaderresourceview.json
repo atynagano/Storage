@@ -1,0 +1,12 @@
+{
+  "Syntax": "void CreateShaderResourceView(\n  [Optional][In] ID3D12Resource pResource,\n  [Optional][In][Const] D3D12_SHADER_RESOURCE_VIEW_DESC* pDesc,\n  [In] D3D12_CPU_DESCRIPTOR_HANDLE DestDescriptor,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createshaderresourceview",
+  "Description": "リソース内のデータにアクセスするためのshader-resourceviewを作成します。",
+  "Remarks": "<h3><a id=\"Processing_YUV_4_2_0_video_formats\"></a><a id=\"processing_yuv_4_2_0_video_formats\"></a><a id=\"PROCESSING_YUV_4_2_0_VIDEO_FORMATS\"></a>Processing YUV 4:2:0 video formats</h3>\nアプリは、ルーマ（Y）プレーンをクロマ（UV）プレーンとは別にマッピングする必要があります。開発者は、同じテクスチャに対して<b>CreateShaderResourceView</b>を2回呼び出し、1チャンネルと2チャンネルのフォーマットを渡すことでこれを行います。Yプレーンと互換性のある1チャンネルフォーマットを渡すと、Yプレーンのみがマッピングされます。UVプレーンと互換性のある2チャンネルフォーマットを渡すと（一緒に）、UプレーンとVプレーンのみを1つのリソースビューとしてマッピングします。\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format\">DXGI_FORMAT</a>にはYUV4:2:0フォーマットを掲載しています。\n\n\n",
+  "Parameters": {
+    "pResource": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a>*</b>\n\nシェーダリソースを表す<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a>オブジェクトへのポインタです。\n\n<i>pResource</i>または<i>pDesc</i>の少なくとも1つが用意されている必要があります。\nnull<i>pResource</i>はnull記述子の初期化に使用され、D3D11のようなnullバインディングの動作（読み込みは0、書き込みは破棄）が保証されますが、記述子のタイプを決定するためには有効な<i>pDesc</i>が必要です。",
+    "pDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_resource_view_desc\">D3D12_SHADER_RESOURCE_VIEW_DESC</a>*</b>\n\nシェーダリソースビューを記述する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_resource_view_desc\">D3D12_SHADER_RESOURCE_VIEW_DESC</a>構造体へのポインタです。\n\nnull<i>pDesc</i>は、可能であればデフォルトの記述子を初期化するために使用されます。この動作は、D3D11のnull記述子の動作と同じで、デフォルトが埋められます。この動作はリソースのフォーマットとディメンション（タイプレスでない場合）を継承し、バッファの場合はSRVがフルバッファをターゲットとし、タイプされています（rawやstructuredではありません）、テクスチャの場合はSRVがフルテクスチャ、すべてのミップ、すべての配列スライスをターゲットとします。すべてのリソースがnull記述子の初期化をサポートしているわけではありません。",
+    "DestDescriptor": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>\n\nシェーダーリソースビューを表すCPU記述子ハンドルについて説明します。このハンドルは、シェーダービジブルまたは非シェーダービジブルの記述子ヒープに作成することができます。"
+  },
+  "Fields": {}
+}
