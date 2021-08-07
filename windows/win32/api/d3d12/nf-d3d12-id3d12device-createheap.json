@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CreateHeap(\n  [In][Const] D3D12_HEAP_DESC* pDesc,\n  [In][Const] Guid* riid,\n  [Optional][Out][ComOutPtr] void** ppvHeap,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createheap",
+  "Description": "配置されたリソースと予約されたリソースで使用可能なヒープを作成します。",
+  "Parameters": {
+    "pDesc": "型: **const [D3D12_HEAP_DESC](./ns-d3d12-d3d12_heap_desc.md)\\***\n\nヒープを記述する定数**D3D12_HEAP_DESC**構造体へのポインタです。",
+    "riid": "型: **REFIID**\n\nppvHeap*で返すヒープインターフェースのグローバルに一意な識別子（**GUID**）への参照です。\n\nID3D12Heap](./nn-d3d12-id3d12heap.md)の**GUID**が最も一般的な*riidResource*ですが、任意のインターフェースの**GUID**であっても構いません。リソースオブジェクトがこの**GUID**のインターフェースをサポートしていない場合、作成は**E_NOINTERFACE**で失敗します。",
+    "ppvHeap": "型: **void\\*\\***\n\n作成されたヒープオブジェクトへの要求されたインターフェイスのポインタを受け取るメモリブロックへの任意のポインタです。\n\n*ppvHeap*には`nullptr`を指定することができ、ケイパビリティテストが可能になります。*ppvHeap*が`nullptr`の場合、オブジェクトは作成されず、*pDesc*が有効な場合は**S_FALSE**が返されます。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: **[HRESULT](/windows/win32/com/structure-of-com-error-codes)**\n\nこの関数が成功した場合、**S_OK**を返します。それ以外の場合は、[**HRESULT**](/windows/desktop/com/structure-of-com-error-codes)[エラーコード](/windows/win32/com/com-error-codes-10)を返します。\n\n|リターン値|説明|。\n|-|-|\n|E_OUTOFMEMORY|ヒープを作成するためのメモリが不足しています。\n\nその他の可能な戻り値については、[Direct3D12returncodes](/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues)を参照してください。"
+}
