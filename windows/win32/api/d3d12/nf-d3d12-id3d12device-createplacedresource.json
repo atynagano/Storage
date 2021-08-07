@@ -1,0 +1,16 @@
+{
+  "Syntax": "HRESULT CreatePlacedResource(\n  [In] ID3D12Heap pHeap,\n  [In] ulong HeapOffset,\n  [In][Const] D3D12_RESOURCE_DESC* pDesc,\n  [In] D3D12_RESOURCE_STATES InitialState,\n  [Optional][In][Const] D3D12_CLEAR_VALUE* pOptimizedClearValue,\n  [In][Const] Guid* riid,\n  [Optional][Out][ComOutPtr] void** ppvResource,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createplacedresource",
+  "Description": "特定のヒープに配置されたリソースを作成します。配置されたリソースは、利用可能なリソースオブジェクトの中で最も軽量であり、作成と破棄が最も速く行えます。",
+  "Parameters": {
+    "pHeap": "型: [in] **<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12heap\">ID3D12Heap</a>***\n\nリソースが配置されているヒープを表す**ID3D12Heap**インターフェースへのポインタです。",
+    "HeapOffset": "型: **<a href=\"https://docs.microsoft.com/windows/win32/WinProg/windows-data-types\">UINT64</a>**\n\nリソースのオフセットをバイト単位で指定します。HeapOffset*はリソースのアラインメントの倍数でなければならず、*HeapOffset*にリソースサイズを加えたものはヒープサイズ以下でなければなりません。テクスチャリソースのサイズを把握するには、<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo\">**GetResourceAllocationInfo**</a>を使用する必要があります。",
+    "pDesc": "型: [in] **const <a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/ns-d3d12-d3d12_resource_desc\">D3D12_RESOURCE_DESC</a>***\n\nリソースを説明する**D3D12_RESOURCE_DESC**構造体へのポインタです。",
+    "InitialState": "型: **<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/ne-d3d12-d3d12_resource_states\">D3D12_RESOURCE_STATES</a>**\n\nD3D12_RESOURCE_STATES**列挙定数のbitwise-orの組み合わせとして、リソースの初期状態。\n\nリソースが**D3D12_HEAP_TYPE_UPLOAD**ヒープと一緒に作成された場合、*InitialState*は**D3D12_RESOURCE_STATE_GENERIC_READ**でなければなりません。リソースが**D3D12_HEAP_TYPE_READBACK**ヒープと一緒に作成された場合、*InitialState*は**D3D12_RESOURCE_STATE_COPYDEST**でなければなりません。",
+    "pOptimizedClearValue": "型: [in, optional] **const <a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/ns-d3d12-d3d12_clear_value\">D3D12_CLEAR_VALUE</a>***\n\nクリアカラーのデフォルト値を示す**D3D12_CLEAR_VALUE**を指定します。\n\n*pOptimizedClearValue*は、クリア操作が最も最適になる値を指定します。作成されたリソースが、**D3D12_RESOURCE_FLAG_ALLOW_RENDER_TARGET**または**D3D12_RESOURCE_FLAG_ALLOW_DEPTH_STENCIL**フラグを持つテクスチャの場合、アプリケーションは、クリア操作が最もよく呼び出される値を選択する必要があります。\n\nクリア操作は他の値でも呼べますが、リソース作成時に渡された値と一致した場合に比べて効率が悪くなります。\n\n*D3D12_RESOURCE_DIMENSION_BUFFER**と併用する場合、*pOptimizedClearValue*はNULLでなければなりません。",
+    "riid": "型: **REFIID**\n\nリソースインターフェースのグローバルに一意な識別子（**GUID**）。これは入力パラメータである。\n\nリソースへのインターフェースの**REFIID**、または**GUID**は、`__uuidof`マクロを使って取得できます。例えば、`__uuidof(ID3D12Resource)`は、リソースへのインターフェースの**GUID**を取得します。riid**は最も一般的には<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12resource\">**ID3D12Resource**</a>のGUIDですが、任意のインターフェイスの任意の**GUID**であっても構いません。リソースオブジェクトがこの**GUID**のインターフェースをサポートしていない場合、作成は**E_NOINTERFACE**で失敗します。",
+    "ppvResource": "型: [out, optional] **void****\n\nリソースへのポインタを受け取るメモリブロックへのポインタです。*ppvResource*は、ケイパビリティ・テストを可能にするために、NULLにすることができます。*ppvResource*がNULLの場合、オブジェクトは作成されず、*pResourceDesc*および他のパラメータが有効な場合はS_FALSEが返されます。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: **<a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a>**\n\nこのメソッドは、リソースを作成するためのメモリが不足している場合、**E_OUTOFMEMORY**を返します。その他の可能な戻り値については、<a href=\"/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>を参照してください。"
+}
