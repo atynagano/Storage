@@ -1,0 +1,16 @@
+{
+  "Syntax": "HRESULT CreateCommittedResource(\n  [In][Const] D3D12_HEAP_PROPERTIES* pHeapProperties,\n  [In] D3D12_HEAP_FLAGS HeapFlags,\n  [In][Const] D3D12_RESOURCE_DESC* pDesc,\n  [In] D3D12_RESOURCE_STATES InitialResourceState,\n  [Optional][In][Const] D3D12_CLEAR_VALUE* pOptimizedClearValue,\n  [In][Const] Guid* riidResource,\n  [Optional][Out][ComOutPtr] void** ppvResource,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createcommittedresource",
+  "Description": "リソースと暗黙のヒープの両方を作成します。ヒープはリソース全体を含むのに十分な大きさで、リソースはヒープにマップされます。",
+  "Parameters": {
+    "pHeapProperties": "型: **const [D3D12_HEAP_PROPERTIES](./ns-d3d12-d3d12_heap_properties.md)\\***\n\nリソースのヒープのプロパティを提供する**D3D12_HEAP_PROPERTIES**構造体へのポインタです。",
+    "HeapFlags": "型: **[D3D12_HEAP_FLAGS](./ne-d3d12-d3d12_heap_flags.md)**\n\nヒープオプションは、**D3D12_HEAP_FLAGS**列挙定数のビットワイズORの組み合わせです。",
+    "pDesc": "型: **const [D3D12_RESOURCE_DESC](./ns-d3d12-d3d12_resource_desc.md)\\***\n\nリソースを説明する**D3D12_RESOURCE_DESC**構造体へのポインタです。",
+    "InitialResourceState": "型: **[D3D12_RESOURCE_STATES](./ne-d3d12-d3d12_resource_states.md)**\n\nD3D12_RESOURCE_STATES**列挙定数のbitwise-orの組み合わせとして、リソースの初期状態。\n\nD3D12_HEAP_TYPE_UPLOAD](./ne-d3d12-d3d12_heap_type.md)のヒープと一緒にリソースを作成する場合は、*InitialResourceState*を[D3D12_RESOURCE_STATE_GENERIC_READ](./ne-d3d12-d3d12_resource_states.md)に設定する必要があります。\n\nD3D12_HEAP_TYPE_READBACK](./ne-d3d12-d3d12_heap_type.md)のヒープと一緒にリソースを作成する場合は、*InitialResourceState*を[D3D12_RESOURCE_STATE_COPYDEST](./ne-d3d12-d3d12_resource_states.md)に設定する必要があります。",
+    "pOptimizedClearValue": "型: **const [D3D12_CLEAR_VALUE](./ns-d3d12-d3d12_clear_value.md)\\***\n\nクリアカラーのデフォルト値を記述した**D3D12_CLEAR_VALUE**構造体を指定します。\n\n*pOptimizedClearValue*は、クリア操作が最も最適になる値を指定します。作成されたリソースが[D3D12_RESOURCE_FLAG_ALLOW_RENDER_TARGET](./ne-d3d12-d3d12_resource_flags.md)または**D3D12_RESOURCE_FLAG_ALLOW_DEPTH_STENCIL**フラグのいずれかを持つテクスチャの場合、クリア操作が最もよく呼び出される値を選択する必要があります。他の値でもクリア操作を呼び出すことはできますが、それらの操作はリソース作成時に渡された値と一致するときほど効率的ではありません。\n\nD3D12_RESOURCE_DIMENSION_BUFFER](./ne-d3d12-d3d12_resource_dimension.md)を使用する場合は、*pOptimizedClearValue*に`nullptr`を設定する必要があります。",
+    "riidResource": "型: **REFIID**\n\nppvResource*で返すリソースインターフェイスのグローバルに一意な識別子（**GUID**）への参照です。\n\nID3D12Resource](./nn-d3d12-id3d12resource.md)の**GUID**が最も一般的な*riidResource*ですが、任意のインターフェースの**GUID**であっても構いません。リソースオブジェクトがこの**GUID**のインターフェースをサポートしていない場合、作成は**E_NOINTERFACE**で失敗します。",
+    "ppvResource": "型: **void\\*\\***\n\n作成されたリソースオブジェクトへの要求されたインターフェースポインタを受け取るメモリブロックへの任意のポインタです。\n\n*ppvResource*は、ケイパビリティテストを可能にするために、`nullptr`にすることができます。ppvResource*が`nullptr`の場合、オブジェクトは作成されず、*pDesc*が有効な場合は**S_FALSE**が返されます。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: **[HRESULT](/windows/win32/com/structure-of-com-error-codes)**\n\nこの関数が成功した場合、**S_OK**を返します。それ以外の場合は、[**HRESULT**](/windows/desktop/com/structure-of-com-error-codes)[エラーコード](/windows/win32/com/com-error-codes-10)を返します。\n\n|リターン値|説明|。\n|-|-|\n|E_OUTOFMEMORY|リソースを作成するためのメモリが不足しています。\n\nその他の可能な戻り値については、[Direct3D12returncodes](/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues)を参照してください。"
+}
