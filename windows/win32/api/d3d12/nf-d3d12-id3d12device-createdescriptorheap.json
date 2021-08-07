@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CreateDescriptorHeap(\n  [In][Const] D3D12_DESCRIPTOR_HEAP_DESC* pDescriptorHeapDesc,\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppvHeap,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createdescriptorheap",
+  "Description": "記述子ヒープオブジェクトを作成します。",
+  "Parameters": {
+    "pDescriptorHeapDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc\">D3D12_DESCRIPTOR_HEAP_DESC</a>*</b>\n\nヒープを記述する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc\">D3D12_DESCRIPTOR_HEAP_DESC</a>構造体へのポインタです。",
+    "riid": "型: <b><b>REFIID</b></b>\n\n記述子ヒープインターフェースのグローバルに一意な識別子（<b>GUID</b>）です。備考を参照。\n入力パラメータです。",
+    "ppvHeap": "型: <b><b>void</b>**</b>\n\n記述子ヒープへのポインタを受け取るメモリブロックへのポインタです。\n<i>ppvHeap</i>はNULLでも構いませんが、これは能力テストを可能にするためです。\n<i>ppvHeap</i>がNULLの場合、オブジェクトは作成されず、<i>pDescriptorHeapDesc</i>が有効な場合はS_FALSEが返されます。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、記述子ヒープ・オブジェクトを作成するためのメモリが不足している場合、<b>E_OUTOFMEMORY</b>を返します。\nその他の可能な戻り値については、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>を参照してください。"
+}
