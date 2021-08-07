@@ -1,0 +1,13 @@
+{
+  "Syntax": "void CopyDescriptorsSimple(\n  [In] uint NumDescriptors,\n  [In] D3D12_CPU_DESCRIPTOR_HANDLE DestDescriptorRangeStart,\n  [In] D3D12_CPU_DESCRIPTOR_HANDLE SrcDescriptorRangeStart,\n  [In] D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapsType,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-copydescriptorssimple",
+  "Description": "記述子をソースからデスティネーションにコピーします。",
+  "Remarks": "\n該当する場合は、[**ID3D12Device::Copy記述子s**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-copy記述子s)よりもこの方法を優先します。コピーの性質が直線的であるため、CPUのキャッシュミス率が良くなることがあります。\n\n",
+  "Parameters": {
+    "NumDescriptors": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nコピーする記述子の枚数です。",
+    "DestDescriptorRangeStart": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>\n\nコピーを開始する先の記述子を記述した<b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>です。\n\nデスティネーションとソースの記述子は、同じ[D3D12_DESCRIPTOR_HEAP_TYPE](/windows/win32/api/d3d12/ne-d3d12-d3d12_記述子_heap_type)のヒープ内になければなりません。",
+    "SrcDescriptorRangeStart": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>\n\nコピーを開始するソース記述子を記述した<b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>です。\n\n>[!重要]です。\n>Src記述子RangeStart*パラメータは、シェーダ不可視の記述子ヒープでなければなりません。これは、シェーダ可視記述子ヒープが**WRITE_COMBINE**メモリまたはGPUローカルメモリに作成される可能性があるためで、このメモリからの読み出しは非常に遅くなります。アプリケーションが、特定のパスまたはフレームに必要な記述子をローカルの「ストレージ」記述子ヒープからGPUバウンド記述子ヒープにコピーすることで記述子ヒープを管理する場合は、ストレージヒープにシェーダ不可視ヒープを使用し、必要に応じてGPU不可視ヒープにコピーします。",
+    "DescriptorHeapsType": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type\">D3D12_DESCRIPTOR_HEAP_TYPE</a></b>\n\nコピーする記述子ヒープのタイプを指定する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type\">D3D12_DESCRIPTOR_HEAP_TYPE</a>型の値です。記述子の種類によってサイズが異なる場合があるため、これが必要です。\n\nソースとデスティネーションの記述子ヒープは両方とも同じタイプでなければならず、そうでない場合はデバッグ層がエラーを出します。"
+  },
+  "Fields": {}
+}
