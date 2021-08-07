@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT OpenSharedHandleByName(\n  [In][Const] PWSTR Name,\n  [In] uint Access,\n  [Out] HANDLE* pNTHandle,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-opensharedhandlebyname",
+  "Description": "NameとAccessを使って、共有リソース、共有ヒープ、共有フェンスのハンドルを開きます。",
+  "Parameters": {
+    "Name": "型: <b>LPCWSTR</b>\n\nの呼び出しで<i>Name</i>パラメータとしてオプションで渡された名前です。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createsharedhandle\">ID3D12Device::CreateSharedHandle</a>.",
+    "Access": "型: <b>DWORD</b>\n\nへの呼び出しで<i>Access</i>パラメータに指定されたアクセスレベルです。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createsharedhandle\">ID3D12Device::CreateSharedHandle</a>.",
+    "pNTHandle": "型: <b>HANDLE*</b>\n\n共有ハンドルへのポインタ。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>のいずれかを返します。"
+}
