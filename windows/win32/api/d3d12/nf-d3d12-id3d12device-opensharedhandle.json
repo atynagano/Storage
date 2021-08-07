@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT OpenSharedHandle(\n  [In] HANDLE NTHandle,\n  [In][Const] Guid* riid,\n  [Optional][Out][ComOutPtr] void** ppvObj,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-opensharedhandle",
+  "Description": "HANDLEとREFIIDを使って、共有リソース、共有ヒープ、共有フェンスのハンドルを開きます。",
+  "Parameters": {
+    "NTHandle": "型: <b>HANDLE</b>\n\nの呼び出しで出力されたハンドルは\n<a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nf-d3d12-id3d12device-createsharedhandle\">ID3D12Device::CreateSharedHandle</a>.",
+    "riid": "型: <b>REFIID</b>\n\n以下のいずれかのインターフェイスのグローバルに一意な識別子（<b>GUID</b>）です。\n\n\n<ul><li><a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12heap\">ID3D12Heap</a></li><li><a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a></li><li><a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12fence\">ID3D12Fence</a></li></ul>\nインターフェイスの<b>REFIID</b>、または<b>GUID</b>は、__uuidof()マクロを使用して取得できます。\n例えば、__uuidof(ID3D12Heap)は、リソースへのインターフェイスの<b>GUID</b>を取得します。",
+    "ppvObj": "型: <b>void**</b>\n\n以下のいずれかのインターフェイスへのポインタを受信するメモリブロックへのポインタ。\n\n\n<ul><li><a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12heap\">ID3D12Heap</a></li><li><a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a></li><li><a href=\"https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12fence\">ID3D12Fence</a></li></ul>"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>の1つを返します。"
+}
