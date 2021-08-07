@@ -1,0 +1,13 @@
+{
+  "Syntax": "HRESULT CreateFence(\n  [In] ulong InitialValue,\n  [In] D3D12_FENCE_FLAGS Flags,\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppFence,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createfence",
+  "Description": "フェンスオブジェクトを作成します。",
+  "Parameters": {
+    "InitialValue": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT64</a></b>\n\nフェンスの初期値です。",
+    "Flags": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_fence_flags\">D3D12_FENCE_FLAGS</a></b>\n\nビット単位のOR演算を用いて結合された<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_fence_flags\">D3D12_FENCE_FLAGS</a>型の値の組み合わせです。\n結果の値は、フェンスのオプションを指定します。",
+    "riid": "型: <b>REFIID</b>\n\nフェンスのインターフェース（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12fence\">ID3D12Fence</a>）のグローバルに一意な識別子（<b>GUID</b>）です。\nフェンスへのインターフェースの<b>REFIID</b>、または<b>GUID</b>は、__uuidof()マクロを使用して取得できます。\n例えば、__uuidof(ID3D12Fence)は、フェンスへのインターフェースの<b>GUID</b>を取得します。",
+    "ppFence": "型: <b>void**</b>\n\nフェンスへのアクセスに使用される<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12fence\">ID3D12Fence</a>インターフェースへのポインタを受け取るメモリブロックへのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/WinProg/windows-data-types\">HRESULT</a></b>\n\n成功した場合は<b>S_OK</b>を、そうでない場合は<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>のいずれかを返します。"
+}
