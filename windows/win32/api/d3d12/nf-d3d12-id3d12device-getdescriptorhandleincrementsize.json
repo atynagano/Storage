@@ -1,0 +1,10 @@
+{
+  "Syntax": "uint GetDescriptorHandleIncrementSize(\n  [In] D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapType,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-getdescriptorhandleincrementsize",
+  "Description": "指定されたタイプの記述子ヒープのハンドル増分のサイズを取得します。この値は通常、記述子配列へのハンドルを適切な量だけインクリメントするために使用されます。",
+  "Parameters": {
+    "DescriptorHeapType": "記述子ヒープのタイプを指定する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type\">D3D12_DESCRIPTOR_HEAP_TYPE</a>型の値で、ハンドル増分のサイズを取得します。"
+  },
+  "Fields": {},
+  "ReturnValue": "指定されたタイプの記述子ヒープのハンドルインクリメントのサイズを、必要なパディングを含めて返します。"
+}
