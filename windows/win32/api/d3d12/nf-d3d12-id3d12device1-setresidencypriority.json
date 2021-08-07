@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT SetResidencyPriority(\n  [In] uint NumObjects,\n  [In][NativeArrayInfo (CountParamIndex = 0)] ID3D12Pageable* ppObjects,\n  [In][Const][NativeArrayInfo (CountParamIndex = 0)] D3D12_RESIDENCY_PRIORITY* pPriorities,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device1-setresidencypriority",
+  "Description": "このメソッドは、指定されたオブジェクトのリストの残余の優先順位を設定します。",
+  "Parameters": {
+    "NumObjects": "型: <b>UINT</b>\n\n<i>ppObjects</i>、<i>pPriorities</i>アレイのオブジェクト数を指定します。",
+    "ppObjects": "型: <b>ID3D12Pageable*</b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pageable\">ID3D12Pageable</a>オブジェクトへの参照を含む、長さ<i>NumObjects</i>の配列を指定します。",
+    "pPriorities": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_residency_priority\">D3D12_RESIDENCY_PRIORITY</a>*</b>\n\nオブジェクトのリストに<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_residency_priority\">D3D12_RESIDENCY_PRIORITY</a>の値を格納する、長さ<i>NumObjects</i>の配列を指定します。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、HRESULTの成功またはエラーコードを返します。"
+}
