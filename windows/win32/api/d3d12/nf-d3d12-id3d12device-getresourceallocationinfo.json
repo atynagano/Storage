@@ -1,0 +1,12 @@
+{
+  "Syntax": "D3D12_RESOURCE_ALLOCATION_INFO GetResourceAllocationInfo(\n  [In] uint visibleMask,\n  [In] uint numResourceDescs,\n  [In][Const][NativeArrayInfo (CountParamIndex = 1)] D3D12_RESOURCE_DESC* pResourceDescs,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-getresourceallocationinfo",
+  "Description": "このアダプタ上のリソースのコレクションに必要なメモリのサイズと配置を取得します。",
+  "Parameters": {
+    "visibleMask": "型: **[UINT](/windows/win32/WinProg/windows-data-types)**\n\nシングルGPUの場合は、0を設定します。複数のGPUノードがある場合は、ノード（デバイスの物理アダプタ）を識別するためのビットを設定します。マスクの各ビットが1つのノードに対応します。Multi-adaptersystems](/windows/win32/direct3d12/multi-engine)も参照してください。",
+    "numResourceDescs": "型: **[UINT](/windows/win32/WinProg/windows-data-types)**\n\n*pResourceDescs*配列内のリソース記述子の数です。",
+    "pResourceDescs": "型: **const [D3D12_RESOURCE_DESC](./ns-d3d12-d3d12_resource_desc.md)\\***\n\n情報を取得するリソースを記述した**D3D12_RESOURCE_DESC**構造体の配列です。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: **[D3D12_RESOURCE_ALLOCATION_INFO](./ns-d3d12-d3d12_resource_allocation_info.md)**\n\nD3D12_RESOURCE_ALLOCATION_INFO](./ns-d3d12-d3d12_resource_allocation_info.md)構造体で、指定されたリソースの配列に割り当てられたビデオメモリの情報を提供します。"
+}
