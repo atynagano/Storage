@@ -1,0 +1,8 @@
+{
+  "Syntax": "HRESULT GetDeviceRemovedReason();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-getdeviceremovedreason",
+  "Description": "デバイスが削除された理由を取得します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、デバイスが削除された理由を返します。"
+}
