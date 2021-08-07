@@ -1,0 +1,16 @@
+{
+  "Syntax": "void CopyDescriptors(\n  [In] uint NumDestDescriptorRanges,\n  [In][Const][NativeArrayInfo (CountParamIndex = 0)] D3D12_CPU_DESCRIPTOR_HANDLE* pDestDescriptorRangeStarts,\n  [Optional][In][Const][NativeArrayInfo (CountParamIndex = 0)] uint* pDestDescriptorRangeSizes,\n  [In] uint NumSrcDescriptorRanges,\n  [In][Const][NativeArrayInfo (CountParamIndex = 3)] D3D12_CPU_DESCRIPTOR_HANDLE* pSrcDescriptorRangeStarts,\n  [Optional][In][Const][NativeArrayInfo (CountParamIndex = 3)] uint* pSrcDescriptorRangeSizes,\n  [In] D3D12_DESCRIPTOR_HEAP_TYPE DescriptorHeapsType,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-copydescriptors",
+  "Description": "記述子をソースからデスティネーションにコピーします。",
+  "Remarks": "\n該当する場合は、この方法よりも[**ID3D12Device::Copy記述子sSimple**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-copy記述子ssimple)を優先してください。コピーが直線的に行われるため、CPUのキャッシュミス率が良くなることがあります。\n\n",
+  "Parameters": {
+    "NumDestDescriptorRanges": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nコピー先の記述子レンジの数です。",
+    "pDestDescriptorRangeStarts": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a>*</b>\n\nコピー先の<b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>オブジェクトの配列です。\n\nデスティネーションとソースの記述子はすべて同じ[D3D12_DESCRIPTOR_HEAP_TYPE](/windows/win32/api/d3d12/ne-d3d12-d3d12_記述子_heap_type)のヒープに入っている必要があります。",
+    "pDestDescriptorRangeSizes": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a>*</b>\n\nコピー先の記述子レンジサイズの配列です。",
+    "NumSrcDescriptorRanges": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nコピー元となる記述子レンジの数です。",
+    "pSrcDescriptorRangeStarts": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a>*</b>\n\nコピー元となる<b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>オブジェクトの配列です。\n\n>[!重要]です。\n>pSrc記述子RangeStarts*パラメータのすべての要素は、シェーダ不可視の記述子ヒープ内になければなりません。これは、シェーダ可視記述子ヒープが**WRITE_COMBINE**メモリまたはGPUローカルメモリに作成される可能性があるためで、このメモリからの読み出しは非常に遅くなります。アプリケーションが、特定のパスまたはフレームに必要な記述子をローカルの「ストレージ」記述子ヒープからGPUバウンド記述子ヒープにコピーして記述子ヒープを管理する場合は、ストレージヒープにシェーダ不可視ヒープを使用し、必要に応じてGPU不可視ヒープにコピーします。",
+    "pSrcDescriptorRangeSizes": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a>*</b>\n\nコピー元となる記述子レンジサイズの配列です。",
+    "DescriptorHeapsType": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type\">D3D12_DESCRIPTOR_HEAP_TYPE</a></b>\n\nコピーする記述子ヒープのタイプを指定する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type\">D3D12_DESCRIPTOR_HEAP_TYPE</a>型の値です。記述子の種類によってサイズが異なる場合があるため、これが必要です。\n\nソースとデスティネーションの記述子ヒープは両方とも同じタイプでなければならず、そうでない場合はデバッグ層がエラーを出します。"
+  },
+  "Fields": {}
+}
