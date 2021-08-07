@@ -1,0 +1,8 @@
+{
+  "Syntax": "uint GetNodeCount();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-getnodecount",
+  "Description": "このデバイスに関連付けられている物理アダプタ（ノード）の数を報告します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n本機が持つ物理アダプタ（ノード）の数。"
+}
