@@ -11,5 +11,5 @@
     "ppCommandList": "型: **void\\*\\***\n\nコマンドリストの[ID3D12CommandList](./nn-d3d12-id3d12commandlist.md)または[ID3D12GraphicsCommandList](./nn-d3d12-id3d12graphicscommandlist.md)インターフェースへのポインタを受け取るメモリブロックへのポインタです。"
   },
   "Fields": {},
-  "ReturnValue": "型: **[HRESULT](/windows/win32/com/structure-of-com-error-codes)**\n\nこの関数が成功した場合、**S_OK**を返します。それ以外の場合は、[**HRESULT**](/windows/desktop/com/structure-of-com-error-codes)[エラーコード](/windows/win32/com/com-error-codes-10)を返します。\n\n|リターン値|説明|。\n|-|-|\n|E_OUTOFMEMORY|コマンドリストを作成するにはメモリが不足しています。\n\nその他の可能な戻り値については、[Direct3D12returncodes](/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues)を参照してください。"
+  "ReturnValue": "型: **[HRESULT](/windows/win32/com/structure-of-com-error-codes)**\n\nこの関数が成功した場合、**S_OK**を返します。それ以外の場合は、[**HRESULT**](/windows/desktop/com/structure-of-com-error-codes)[errorcode](/windows/win32/com/com-error-codes-10)を返します。\n\n|リターン値|説明|。\n|-|-|\n|E_OUTOFMEMORY|コマンドリストを作成するにはメモリが不足しています。\n\nその他の可能な戻り値については、[Direct3D12returncodes](/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues)を参照してください。"
 }
