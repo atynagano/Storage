@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CreateCommandAllocator(\n  [In] D3D12_COMMAND_LIST_TYPE type,\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppCommandAllocator,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createcommandallocator",
+  "Description": "コマンド・アロケータ・オブジェクトを作成します。",
+  "Parameters": {
+    "type": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_command_list_type\">D3D12_COMMAND_LIST_TYPE</a></b>\n\n作成するコマンドアロケータのタイプを指定する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_command_list_type\">D3D12_COMMAND_LIST_TYPE</a>型の値です。\nコマンドアロケータのタイプは、ダイレクトコマンドリストまたはバンドルを記録するタイプになります。",
+    "riid": "型: <b>REFIID</b>\n\nコマンドアロケータのインターフェース（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandallocator\">ID3D12CommandAllocator</a>）のグローバルに一意な識別子（<b>GUID</b>）です。\nコマンドアロケータのインターフェースの<b>REFIID</b>、または<b>GUID</b>は、__uuidof()マクロを使用して取得できます。\n例えば、__uuidof(ID3D12CommandAllocator)は、コマンドアロケータへのインターフェースの<b>GUID</b>を取得します。",
+    "ppCommandAllocator": "型: <b>void**</b>\n\nコマンドアロケータの<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandallocator\">ID3D12CommandAllocator</a>インターフェイスへのポインタを受け取るメモリブロックへのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、コマンドアロケータを作成するためのメモリが不足している場合、<b>E_OUTOFMEMORY</b>を返します。\nその他の可能な戻り値については、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>を参照してください。"
+}
