@@ -1,0 +1,13 @@
+{
+  "Syntax": "HRESULT CreateCommandSignature(\n  [In][Const] D3D12_COMMAND_SIGNATURE_DESC* pDesc,\n  [Optional][In] ID3D12RootSignature pRootSignature,\n  [In][Const] Guid* riid,\n  [Optional][Out][ComOutPtr] void** ppvCommandSignature,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createcommandsignature",
+  "Description": "このメソッドは、コマンドシグネチャを作成します。",
+  "Parameters": {
+    "pDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_signature_desc\">D3D12_COMMAND_SIGNATURE_DESC</a>*</b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_signature_desc\">D3D12_COMMAND_SIGNATURE_DESC</a>構造で作成されるコマンドシグネチャを記述します。",
+    "pRootSignature": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12rootsignature\">ID3D12RootSignature</a>*</b>\n\nコマンドシグネチャが適用される<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12rootsignature\">ID3D12RootSignature</a>を指定します。\n\n\nルートシグネチャは、シグネチャ内のコマンドのいずれかがパイプライン上のバインディングを更新する場合に必要です。コマンドがドローまたはディスパッチのみの場合は、ルートシグネチャパラメータをNULLに設定できます。",
+    "riid": "型: <b>REFIID</b>\n\nコマンドシグネチャのインターフェース(<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandsignature\">ID3D12CommandSignature</a>)のグローバルに一意な識別子(<b>GUID</b>)です。\nコマンドシグネチャのインターフェースの<b>REFIID</b>、または<b>GUID</b>は、__uuidof()マクロを使用して取得できます。\n例えば、__uuidof(<b>ID3D12CommandSignature</b>)は、コマンドシグネチャへのインターフェースの<b>GUID</b>を取得します。",
+    "ppvCommandSignature": "型: <b>void**</b>\n\nこのメソッドが正常に完了した場合、作成されたコマンドシグネチャ（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandsignature\">ID3D12CommandSignature</a>）を指すポインタを指定します。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>のいずれかを返します。"
+}
