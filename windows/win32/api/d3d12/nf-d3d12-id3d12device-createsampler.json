@@ -1,0 +1,10 @@
+{
+  "Syntax": "void CreateSampler(\n  [In][Const] D3D12_SAMPLER_DESC* pDesc,\n  [In] D3D12_CPU_DESCRIPTOR_HANDLE DestDescriptor,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createsampler",
+  "Description": "テクスチャーのサンプリング情報をカプセル化したサンプラーオブジェクトを作成します。",
+  "Parameters": {
+    "pDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_sampler_desc\">D3D12_SAMPLER_DESC</a>*</b>\n\nサンプラーを記述した<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_sampler_desc\">D3D12_SAMPLER_DESC</a>構造体へのポインタです。",
+    "DestDescriptor": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>\n\nサンプラーを格納するヒープの開始点を示すCPU記述子ハンドルを記述します。"
+  },
+  "Fields": {}
+}
