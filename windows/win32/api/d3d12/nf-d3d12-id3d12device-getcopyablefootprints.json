@@ -1,0 +1,17 @@
+{
+  "Syntax": "void GetCopyableFootprints(\n  [In][Const] D3D12_RESOURCE_DESC* pResourceDesc,\n  [In] uint FirstSubresource,\n  [In] uint NumSubresources,\n  [In] ulong BaseOffset,\n  [Optional][Out][NativeArrayInfo (CountParamIndex = 2)] D3D12_PLACED_SUBRESOURCE_FOOTPRINT* pLayouts,\n  [Optional][Out][NativeArrayInfo (CountParamIndex = 2)] uint* pNumRows,\n  [Optional][Out][NativeArrayInfo (CountParamIndex = 2)] ulong* pRowSizeInBytes,\n  [Optional][Out] ulong* pTotalBytes,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-getcopyablefootprints",
+  "Description": "コピー可能なリソースレイアウトを取得します。アップロードヒープの領域をサブアロケートするときに、アプリケーションがD3D12_PLACED_SUBRESOURCE_FOOTPRINTおよびD3D12_SUBRESOURCE_FOOTPRINTを埋めるのに役立ちます。",
+  "Remarks": "\nこのルーチンは、アプリケーションが次の項目を入力するのを支援します。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_placed_subresource_footprint\">D3D12_PLACED_SUBRESOURCE_FOOTPRINT</a>および\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_placed_subresource_footprint\">D3D12_PLACED_SUBRESOURCE_FOOTPRINT</a>および<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint\">D3D12_SUBRESOURCE_FOOTPRINT</a>構造体を埋める際にアプリケーションを支援します。\n結果として得られる構造体はGPUアダプタに依存しないため、値はGPUアダプタごとに異なりません。\n<b>GetCopyableFootprints</b>では、リソースフォーマット、テクスチャレイアウト、およびアラインメント要件に関する指定された詳細（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc\">D3D12_RESOURCE_DESC</a>構造から）を使用して、サブリソース構造を埋めます。\nアプリケーションはこれらの詳細情報にアクセスできるため、この方法またはそのバリエーションは、アプリケーションの一部として記述することができます。\n\n\n\n",
+  "Parameters": {
+    "pResourceDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc\">D3D12_RESOURCE_DESC</a>*</b>\n\nリソースの説明（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc\">D3D12_RESOURCE_DESC</a>構造体へのポインタとして）。",
+    "FirstSubresource": "型: <b>UINT</b>\n\nリソース内の最初のサブリソースのインデックス。\n有効な値の範囲は0～D3D12_REQ_SUBRESOURCESです。",
+    "NumSubresources": "型: <b>UINT</b>\n\nリソースに含まれるサブリソースの数です。有効な値の範囲は0～（D3D12_REQ_SUBRESOURCES-<i>FirstSubresource</i>）です。",
+    "BaseOffset": "型: <b>UINT64</b>\n\nリソースへのオフセット（バイト単位）です。",
+    "pLayouts": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_placed_subresource_footprint\">D3D12_PLACED_SUBRESOURCE_FOOTPRINT</a>*</b>\n\nの配列（長さ<i>NumSubresources</i>）へのポインタである。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_placed_subresource_footprint\">D3D12_PLACED_SUBRESOURCE_FOOTPRINT</a>構造体の配列（長さ<i>NumSubresources</i>）へのポインタで、各サブリソースの説明と配置が記入されます。",
+    "pNumRows": "型: <b>UINT*</b>\n\n整数変数の配列（長さ<i>NumSubresources</i>）へのポインタで、各サブリソースの行数が格納されます。",
+    "pRowSizeInBytes": "型: <b>UINT64*</b>\n\n整数変数の配列（長さ<i>NumSubresources</i>）へのポインタで、各エントリには、各サブリソースの行のパッドなしのサイズがバイト単位で入力されます。\n\n\n例えば、Texture2Dリソースの幅が32、1ピクセルあたりのバイト数が4の場合。\n\nの場合、<i>pRowSizeInBytes</i>は128を返します。\n\n<i>pRowSizeInBytes</i>は<b>row pitch</b>と混同してはいけません。<i>pLayouts</i>を調べて、そこから行ピッチを得ると、D3D12_TEXTURE_DATA_PITCH_ALIGNMENTに合わせて256になります。",
+    "pTotalBytes": "型: <b>UINT64*</b>\n\n整数変数へのポインタで、バイト単位の総サイズが格納されます。"
+  },
+  "Fields": {}
+}
