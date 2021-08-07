@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CreateQueryHeap(\n  [In][Const] D3D12_QUERY_HEAP_DESC* pDesc,\n  [In][Const] Guid* riid,\n  [Optional][Out][ComOutPtr] void** ppvHeap,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createqueryheap",
+  "Description": "クエリヒープを作成します。クエリヒープは、クエリの配列を含みます。",
+  "Parameters": {
+    "pDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_query_heap_desc\">D3D12_QUERY_HEAP_DESC</a>*</b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_query_heap_desc\">D3D12_QUERY_HEAP_DESC</a>構造のクエリヒープを指定します。",
+    "riid": "型: <b>REFIID</b>\n\nヒープを一意に識別するREFIIDを指定します。",
+    "ppvHeap": "型: <b>void**</b>\n\nこのメソッドが正常に完了したときに返されるヒープへのポインタを指定します。\n<i>ppvHeap</i>にはNULLを指定することができ、機能テストを行うことができます。\n<i>ppvHeap</i>がNULLの場合、オブジェクトは作成されず、<i>pDesc</i>が有効な場合はS_FALSEが返されます。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>の1つを返します。"
+}
