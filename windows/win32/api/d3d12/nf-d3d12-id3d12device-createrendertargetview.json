@@ -1,0 +1,11 @@
+{
+  "Syntax": "void CreateRenderTargetView(\n  [Optional][In] ID3D12Resource pResource,\n  [Optional][In][Const] D3D12_RENDER_TARGET_VIEW_DESC* pDesc,\n  [In] D3D12_CPU_DESCRIPTOR_HANDLE DestDescriptor,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createrendertargetview",
+  "Description": "リソースデータにアクセスするためのレンダーターゲットビューを作成します。",
+  "Parameters": {
+    "pResource": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a>*</b>\n\nレンダリングターゲットを表す<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a>オブジェクトへのポインタです。\n\n\n<i>pResource</i>または<i>pDesc</i>の少なくとも1つが提供されなければなりません。\nnull<i>pResource</i>はnull記述子の初期化に使用され、D3D11のようなnullバインディングの動作（読み込みは0、書き込みは破棄）が保証されますが、記述子のタイプを決定するためには有効な<i>pDesc</i>が必要です。",
+    "pDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_render_target_view_desc\">D3D12_RENDER_TARGET_VIEW_DESC</a>*</b>\n\nレンダリング・ターゲット・ビューを記述する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_render_target_view_desc\">D3D12_RENDER_TARGET_VIEW_DESC</a>構造体へのポインタです。\n\nnull<i>pDesc</i>は、可能であればデフォルトの記述子を初期化するために使用されます。この動作は、D3D11のnull記述子の動作と同じで、デフォルトが埋められます。この動作は、リソースのフォーマットとディメンション（タイプレスでない場合）を継承し、RTVは最初のミップとすべての配列スライスを対象とします。すべてのリソースがnull記述子の初期化をサポートしているわけではありません。",
+    "DestDescriptor": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>\n\n新たに作成されたレンダリングターゲットビューが置かれる先を表すCPU記述子ハンドルを記述します。"
+  },
+  "Fields": {}
+}
