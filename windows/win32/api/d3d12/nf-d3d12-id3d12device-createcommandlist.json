@@ -1,0 +1,15 @@
+{
+  "Syntax": "HRESULT CreateCommandList(\n  [In] uint nodeMask,\n  [In] D3D12_COMMAND_LIST_TYPE type,\n  [In] ID3D12CommandAllocator pCommandAllocator,\n  [Optional][In] ID3D12PipelineState pInitialState,\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppCommandList,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createcommandlist",
+  "Description": "コマンドリストを作成します。",
+  "Parameters": {
+    "nodeMask": "型: **[UINT](/windows/win32/WinProg/windows-data-types)**\n\nシングルGPU動作の場合は、0を設定します。複数のGPUノードがある場合は、コマンドリストを作成するノード（デバイスの物理アダプタ）を特定するためのビットを設定します。マスクの各ビットは1つのノードに対応します。1つのビットだけを設定する必要があります。Multi-adaptersystems](/windows/win32/direct3d12/multi-engine)も参照してください。",
+    "type": "型: **[D3D12_COMMAND_LIST_TYPE](./ne-d3d12-d3d12_command_list_type.md)**\n\n作成するコマンドリストの種類を指定します。",
+    "pCommandAllocator": "型: **[ID3D12CommandAllocator](./nn-d3d12-id3d12commandallocator.md)\\***\n\nデバイスがコマンドリストを作成するためのコマンドアロケータオブジェクトへのポインタです。",
+    "pInitialState": "型: **[ID3D12PipelineState](./nn-d3d12-id3d12pipelinestate.md)\\***\n\nコマンドリストの初期パイプライン状態を含むパイプライン状態オブジェクトへのオプションのポインタです。これが`nulltpr`であれば、ランタイムはダミーの初期パイプライン状態を設定し、ドライバーが未定義の状態に対処しなくても済むようにします。このためのオーバーヘッドは低く、特にコマンドリストの場合は、コマンドリストを記録するための全体的なコストが、1つの初期状態設定のコストを上回る可能性があります。そのため、パイプラインの初期状態パラメータを設定しなくても、それが不便であればコストはほとんどかかりません。\n\n一方、バンドルの場合は、初期状態のパラメータを設定しようとする方が理にかなっているかもしれません（バンドルの方が全体的に小さく、頻繁に再利用できる可能性があるからです）。",
+    "riid": "型: **REFIID**\n\nppCommandList*で返すコマンドリストインターフェースのグローバルに一意な識別子（**GUID**）への参照です。",
+    "ppCommandList": "型: **void\\*\\***\n\nコマンドリストの[ID3D12CommandList](./nn-d3d12-id3d12commandlist.md)または[ID3D12GraphicsCommandList](./nn-d3d12-id3d12graphicscommandlist.md)インターフェースへのポインタを受け取るメモリブロックへのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: **[HRESULT](/windows/win32/com/structure-of-com-error-codes)**\n\nこの関数が成功した場合、**S_OK**を返します。それ以外の場合は、[**HRESULT**](/windows/desktop/com/structure-of-com-error-codes)[エラーコード](/windows/win32/com/com-error-codes-10)を返します。\n\n|リターン値|説明|。\n|-|-|\n|E_OUTOFMEMORY|コマンドリストを作成するにはメモリが不足しています。\n\nその他の可能な戻り値については、[Direct3D12returncodes](/windows/win32/direct3d12/d3d12-graphics-reference-returnvalues)を参照してください。"
+}
