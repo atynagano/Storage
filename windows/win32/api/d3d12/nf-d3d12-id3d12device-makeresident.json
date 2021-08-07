@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT MakeResident(\n  [In] uint NumObjects,\n  [In][NativeArrayInfo (CountParamIndex = 0)] ID3D12Pageable* ppObjects,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-makeresident",
+  "Description": "オブジェクトをデバイスに常駐させます。",
+  "Parameters": {
+    "NumObjects": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nデバイスを常駐させるための<i>ppObjects</i>配列のオブジェクトの数。",
+    "ppObjects": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pageable\">ID3D12Pageable</a>*</b>\n\nオブジェクトの<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pageable\">ID3D12Pageable</a>インターフェイスのポインタの配列を含むメモリブロックへのポインタです。\n\n\nほとんどのD3D12オブジェクトが<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pageable\">ID3D12Pageable</a>を継承しているにもかかわらず、レジデントの変更は以下のオブジェクトでのみサポートされています。\n記述子ヒープ、ヒープ、コミットされたリソース、およびクエリヒープ"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>の1つを返します。"
+}
