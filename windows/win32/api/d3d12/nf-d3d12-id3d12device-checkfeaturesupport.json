@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CheckFeatureSupport(\n  [In] D3D12_FEATURE Feature,\n  [In][Out][MemorySize (BytesParamIndex = 2)] void* pFeatureSupportData,\n  [In] uint FeatureSupportDataSize,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-checkfeaturesupport",
+  "Description": "現在のグラフィックドライバーでサポートされている機能に関する情報を取得します。",
+  "Parameters": {
+    "Feature": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_feature\">D3D12_FEATURE</a></b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_feature\">D3D12_FEATURE</a>列挙の定数で、サポートを求める機能を表します。",
+    "pFeatureSupportData": "型: <b>void*</b>\n\n<i>Feature</i>パラメータの値に対応するデータ構造へのポインタです。各定数に対応するデータ構造を決定するには、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_feature\">D3D12_FEATURE</a>を参照してください。",
+    "FeatureSupportDataSize": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n<i>pFeatureSupportData</i>パラメータが指す構造体のサイズです。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n正常に動作した場合は<b>S_OK</b>を返します。<i>pFeatureSupportData</i>パラメータにサポートされていないデータ型が渡された場合や、<i>FeatureSupportDataSize</i>パラメータにサイズの不一致が検出された場合は<b>E_INVALIDARG</b>を返します。"
+}
