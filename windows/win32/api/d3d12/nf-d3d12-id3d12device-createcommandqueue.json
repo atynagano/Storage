@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CreateCommandQueue(\n  [In][Const] D3D12_COMMAND_QUEUE_DESC* pDesc,\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppCommandQueue,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createcommandqueue",
+  "Description": "コマンドキューを作成します。",
+  "Parameters": {
+    "pDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_command_queue_desc\">D3D12_COMMAND_QUEUE_DESC</a>*</b>\n\nコマンドキューを記述するD3D12_COMMAND_QUEUE_DESCを指定します。",
+    "riid": "型: <b><b>REFIID</b></b>\n\nコマンドキューインターフェースのグローバルにユニークな識別子（GUID）。remarksを参照。入力パラメータです。",
+    "ppCommandQueue": "型: <b><b>void</b>**</b>\n\nコマンドキューの<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue\">ID3D12CommandQueue</a>インターフェイスへのポインタを受け取るメモリブロックへのポインタです。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、コマンドキューを作成するためのメモリが不足している場合、<b>E_OUTOFMEMORY</b>を返します。\nその他の可能な戻り値については、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>を参照してください。"
+}
