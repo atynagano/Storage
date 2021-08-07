@@ -1,0 +1,8 @@
+{
+  "Syntax": "LUID GetAdapterLuid();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-getadapterluid",
+  "Description": "現在のデバイス（アダプタ）のローカルに一意な識別子を取得します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/desktop/WinProg/windows-data-types\">LUID</a></b>\n\nアダプタのローカルに一意な識別子です。"
+}
