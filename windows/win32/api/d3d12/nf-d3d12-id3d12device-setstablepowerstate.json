@@ -1,0 +1,10 @@
+{
+  "Syntax": "HRESULT SetStablePowerState(\n  [In] BOOL Enable,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-setstablepowerstate",
+  "Description": "ある種のプロファイリングや実験的プロトタイピングのための開発時間短縮のための補助ツール。",
+  "Parameters": {
+    "Enable": "型: <b>BOOL</b>\n\n安定した電源の状態をオン/オフするBOOLを指定します。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>の1つを返します。"
+}
