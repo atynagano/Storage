@@ -1,0 +1,12 @@
+{
+  "Syntax": "HRESULT CreateComputePipelineState(\n  [In][Const] D3D12_COMPUTE_PIPELINE_STATE_DESC* pDesc,\n  [In][Const] Guid* riid,\n  [Out][ComOutPtr] void** ppPipelineState,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12device-createcomputepipelinestate",
+  "Description": "Computepipelinestateオブジェクトを作成します。",
+  "Parameters": {
+    "pDesc": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_compute_pipeline_state_desc\">D3D12_COMPUTE_PIPELINE_STATE_DESC</a>*</b>\n\nコンピュートパイプラインの状態を表す<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_compute_pipeline_state_desc\">D3D12_COMPUTE_PIPELINE_STATE_DESC</a>構造体へのポインタです。",
+    "riid": "型: <b>REFIID</b>\n\nパイプライン状態のインターフェース（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pipelinestate\">ID3D12PipelineState</a>）のグローバルに一意な識別子（<b>GUID</b>）です。\nパイプラインステートへのインターフェースの<b>REFIID</b>、または<b>GUID</b>は、__uuidof()マクロを使用して取得できます。\n例えば、__uuidof(ID3D12PipelineState)は、パイプラインステートへのインターフェイスの<b>GUID</b>を取得します。",
+    "ppPipelineState": "型: <b>void**</b>\n\nパイプライン・ステート・オブジェクトの<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pipelinestate\">ID3D12PipelineState</a>インターフェースへのポインタを受け取るメモリブロックへのポインタ。\nパイプライン・ステート・オブジェクトは、不変のステート・オブジェクトです。メソッドは含まれていません。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\nこのメソッドは、パイプライン・ステート・オブジェクトを作成するためのメモリが不足している場合、<b>E_OUTOFMEMORY</b>を返します。\nその他の可能な戻り値については、<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>を参照してください。"
+}
