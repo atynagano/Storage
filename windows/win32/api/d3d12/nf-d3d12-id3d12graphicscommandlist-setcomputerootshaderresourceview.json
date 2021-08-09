@@ -1,0 +1,10 @@
+{
+  "Syntax": "void SetComputeRootShaderResourceView(\n  [In] uint RootParameterIndex,\n  [In] ulong BufferLocation,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootshaderresourceview",
+  "Description": "コンピュート・ルート・シグネチャー内のシェーダー・リソースのCPU記述子ハンドルを設定します。",
+  "Parameters": {
+    "RootParameterIndex": "型: <b>UINT</b>\n\nバインディング用のスロット番号です。",
+    "BufferLocation": "型: <b>D3D12_GPU_VIRTUAL_ADDRESS</b>\n\nバッファのGPU仮想アドレスです。\nD3D12_GPU_VIRTUAL_ADDRESSは、UINT64のtypedefされたエイリアスです。"
+  },
+  "Fields": {}
+}
