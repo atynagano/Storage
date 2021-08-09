@@ -1,0 +1,10 @@
+{
+  "Syntax": "void ExecuteBundle(\n  [In] ID3D12GraphicsCommandList pCommandList,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-executebundle",
+  "Description": "バンドルを実行します。",
+  "Remarks": "\nバンドルは、パイプライン・ステート・オブジェクトとプリミティブ・トポロジーを除き、<b>ExecuteBundle</b>が呼び出された親コマンド・リストからすべてのステートを継承します。\nバンドルに設定された状態はすべて、親コマンドリストの状態に影響を与えます。\n<b>ExecuteBundle</b>は述語の操作ではないことに注意してください。\n\n\n<h3><a id=\"Runtime_validation\"></a><a id=\"runtime_validation\"></a><a id=\"RUNTIME_VALIDATION\"></a>Runtime validation</h3>\nランタイムは、\"callee\"がバンドルであり、\"calleer\"がダイレクト・コマンド・リストであることを検証する。ランタイムはまた、バンドルが閉じられたことを検証する。契約に違反した場合、ランタイムは静かにコールを落とす。\n検証に失敗すると、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-close\">Close</a>はE_INVALIDARGを返します。\n\n\n<h3><a id=\"Debug_layer\"></a><a id=\"debug_layer\"></a><a id=\"DEBUG_LAYER\"></a>Debug layer</h3>\nランタイムが失敗するのと同じケースで、デバッグ層は警告を発します。\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists\">ExecuteCommandList</a>が呼び出されたときに述語が設定されていると、デバッグ層は警告を発します。\nまた、コマンドリストによって参照されているリソースが破壊されたことを検出した場合、デバッグ層はエラーを発行します。\n\n\nまた、デバッグレイヤでは、コマンドリストで<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-close\">Close</a>が呼び出されてから、バンドルに関連付けられたコマンドアロケータがリセットされていないことを検証します。この検証は、<b>ExecuteBundle</b>時、および親コマンドリストがコマンドキューで実行されたときに行われます。\n\n\n\n",
+  "Parameters": {
+    "pCommandList": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist\">ID3D12GraphicsCommandList</a>*</b>\n\n実行するバンドルを決定する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist\">ID3D12GraphicsCommandList</a>を指定します。"
+  },
+  "Fields": {}
+}
