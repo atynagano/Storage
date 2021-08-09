@@ -1,0 +1,14 @@
+{
+  "Syntax": "void DrawIndexedInstanced(\n  [In] uint IndexCountPerInstance,\n  [In] uint InstanceCount,\n  [In] uint StartIndexLocation,\n  [In] int BaseVertexLocation,\n  [In] uint StartInstanceLocation,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-drawindexedinstanced",
+  "Description": "インデックス付き、インスタンス化されたプリミティブを描画します。",
+  "Remarks": "\n描画APIは、レンダリングパイプラインに作品を提出します。\n\nインスタンス化により、同じジオメトリをシーン内の複数のオブジェクトの描画に再利用することで、パフォーマンスが向上する可能性があります。インスタンス化の例としては\n同じオブジェクトを異なる位置と色で描画する。インスタンス化には、複数の頂点バッファが必要です。\nインスタンス化には複数の頂点バッファが必要です。\n\n\n",
+  "Parameters": {
+    "IndexCountPerInstance": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n各インスタンスのインデックスバッファから読み込まれたインデックスの数。",
+    "InstanceCount": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n描画するインスタンスの数。",
+    "StartIndexLocation": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nGPUがインデックスバッファから読み出した最初のインデックスの位置。",
+    "BaseVertexLocation": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">INT</a></b>\n\n頂点バッファから頂点を読み込む前に、各インデックスに追加される値。",
+    "StartInstanceLocation": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n頂点バッファからインスタンスごとのデータを読み込む前に、各インデックスに追加される値。"
+  },
+  "Fields": {}
+}
