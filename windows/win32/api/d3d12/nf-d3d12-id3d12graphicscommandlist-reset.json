@@ -1,0 +1,11 @@
+{
+  "Syntax": "HRESULT Reset(\n  [In] ID3D12CommandAllocator pAllocator,\n  [Optional][In] ID3D12PipelineState pInitialState,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-reset",
+  "Description": "コマンドリストを初期状態に戻し、あたかも新しいコマンドリストが作成されたかのような状態にします。",
+  "Parameters": {
+    "pAllocator": "型: <b>ID3D12CommandAllocator*</b>\n\nデバイスがコマンドリストを作成するための<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12commandallocator\">ID3D12CommandAllocator</a>オブジェクトへのポインタです。",
+    "pInitialState": "型: <b>ID3D12PipelineState*</b>\n\nコマンドリストの初期パイプライン状態を含む<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pipelinestate\">ID3D12PipelineState</a>オブジェクトへのポインタです。これはオプションで、NULLでもよい。NULLの場合、ランタイムはダミーの初期パイプライン状態を設定し、ドライバが未定義の状態に対処する必要がないようにします。このオーバーヘッドは低く、特にコマンドリストの場合は、コマンドリストを記録するための全体的なコストが1つの初期状態設定のコストよりも大きいと思われる。そのため、都合が悪ければパイプラインの初期状態パラメータを設定しなくても、コストはほとんどかかりません。\n\n一方、バンドルの場合は、バンドルの方が全体的に小さく、頻繁に再利用できる可能性があるため、初期状態のパラメータを設定するようにした方がよいでしょう。"
+  },
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n成功した場合は<b>S_OK</b>を、そうでない場合は以下のいずれかの値を返します。\n\n\n<ul><li><b>E_FAIL</b> if the command list was not in the \"closed\" state when the <b>Reset</b> call was made, or the per-device limit would have been exceeded.\n              </li><li><b>E_OUTOFMEMORY</b> if the operating system ran out of memory.\n              </li><li><b>E_INVALIDARG</b> if the allocator is currently being used with another command list in the \"recording\" state or if the specified allocator was created with the wrong type.\n              </li></ul>\nその他の可能な戻り値については<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>を参照してください。"
+}
