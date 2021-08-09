@@ -1,0 +1,11 @@
+{
+  "Syntax": "void RSSetViewports(\n  [In] uint NumViewports,\n  [In][Const][NativeArrayInfo (CountParamIndex = 0)] D3D12_VIEWPORT* pViewports,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-rssetviewports",
+  "Description": "ビューポートの配列をパイプラインのラスタライザステージにバインドします。",
+  "Remarks": "\nすべてのビューポートは、1つの操作としてアトミックに設定する必要があります。呼び出しによって定義されていないビューポートはすべて無効になります。\n\n\nどのビューポートを使用するかは、ジオメトリシェーダが出力する<a href=\"https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics\">SV_ViewportArrayIndex</a>セマンティックによって決定されます。ジオメトリシェーダがセマンティックを指定していない場合、Direct3Dは配列の最初のビューポートを使用します。\n\n\n<div class=\"alert\"><b>Note</b>\u00A0\u00A0Even though you specify float values to the members of the <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_viewport\">D3D12_VIEWPORT</a> structure for the <i>pViewports</i> array in a call to  <b>RSSetViewports</b> for <a href=\"https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro\">feature levels</a> 9_x, <b>RSSetViewports</b> uses DWORDs internally. Because of this behavior, when you use a negative top left corner for the viewport, the call to  <b>RSSetViewports</b> for feature levels 9_x fails. This failure occurs because <b>RSSetViewports</b> for 9_x casts the floating point values into unsigned integers without validation, which results in integer overflow.\n      </div><div>\u00A0</div>\n\n",
+  "Parameters": {
+    "NumViewports": "型: <b>UINT</b>\n\nバインドするビューポートの数。\n有効な値の範囲は（0,D3D12_VIEWPORT_AND_SCISSORRECT_OBJECT_COUNT_PER_PIPELINE）です。",
+    "pViewports": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_viewport\">D3D12_VIEWPORT</a>*</b>\n\nデバイスにバインドするための<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_viewport\">D3D12_VIEWPORT</a>構造体の配列です。"
+  },
+  "Fields": {}
+}
