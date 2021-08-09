@@ -1,0 +1,9 @@
+{
+  "Syntax": "void SetPipelineState(\n  [In] ID3D12PipelineState pPipelineState,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate",
+  "Description": "すべてのシェーダーを設定し、グラフィックス・プロセッシング・ユニット（GPU）パイプラインのほとんどの固定機能状態をプログラムします。",
+  "Parameters": {
+    "pPipelineState": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pipelinestate\">ID3D12PipelineState</a>*</b>\n\nパイプラインの状態データを含む<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pipelinestate\">ID3D12PipelineState</a>へのポインタ。"
+  },
+  "Fields": {}
+}
