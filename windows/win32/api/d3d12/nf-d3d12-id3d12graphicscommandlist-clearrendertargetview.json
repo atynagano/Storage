@@ -1,0 +1,13 @@
+{
+  "Syntax": "void ClearRenderTargetView(\n  [In] D3D12_CPU_DESCRIPTOR_HANDLE RenderTargetView,\n  [In][Const] float* ColorRGBA,\n  [In] uint NumRects,\n  [In][Const][NativeArrayInfo (CountParamIndex = 2)] RECT* pRects,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-clearrendertargetview",
+  "Description": "レンダリングターゲットのすべての要素を1つの値に設定します。",
+  "Remarks": "<b>ClearRenderTargetView</b>は、同じヒープメモリをエイリアスするリソースの初期化に使用することができます。詳細は<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createplacedresource\">CreatePlacedResource</a>を参照してください。\n\n<h3><a id=\"Runtime_validation\"></a><a id=\"runtime_validation\"></a><a id=\"RUNTIME_VALIDATION\"></a>Runtime validation</h3>\n浮動小数点入力の場合、ランタイムは非正規化された値を（NANを維持したまま）0に設定します。\n\nバリデーションに失敗すると、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-close\">Close</a>への呼び出しが<b>E_INVALIDARG</b>に戻ってしまいます。\n\n\n<h3><a id=\"Debug_layer\"></a><a id=\"debug_layer\"></a><a id=\"DEBUG_LAYER\"></a>Debug layer</h3>\nデバッグレイヤーでは、入力された色が非正規化されるとエラーになります。\n\nビューが参照するサブリソースの状態が適切でない場合、デバッグ層はエラーを発生させます。\n<b>ClearRenderTargetView</b>の場合、状態は<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states\">D3D12_RESOURCE_STATE_RENDER_TARGET</a>でなければなりません。\n\n\n\n",
+  "Parameters": {
+    "RenderTargetView": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a></b>\n\nクリアすべきレンダリングターゲットのヒープの先頭を示すCPU記述子ハンドルを記述したD3D12_CPU_DESCRIPTOR_HANDLE構造体を指定します。",
+    "ColorRGBA": "型: <b>const FLOAT[4]</b>\n\nレンダリングターゲットを塗りつぶす色を表す4成分の配列です。",
+    "NumRects": "型: <b>UINT</b>\n\n<i>pRects</i>パラメータで指定された配列内の長方形の数です。",
+    "pRects": "型: <b>const D3D12_RECT*</b>\n\n<b>D3D12_RECT</b>構造体の配列で、リソースビュー内の矩形をクリアします。<b>NULL</b>の場合、<b>ClearRenderTargetView</b>はリソースビュー全体をクリアします。"
+  },
+  "Fields": {}
+}
