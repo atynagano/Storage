@@ -1,0 +1,12 @@
+{
+  "Syntax": "void BeginQuery(\n  [In] ID3D12QueryHeap pQueryHeap,\n  [In] D3D12_QUERY_TYPE Type,\n  [In] uint Index,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-beginquery",
+  "Description": "クエリの実行を開始します。",
+  "Remarks": "\nD3D12のクエリについては、<a href=\"https://docs.microsoft.com/windows/desktop/direct3d12/queries\">Queries</a>を参照してください。\n\n\n\n",
+  "Parameters": {
+    "pQueryHeap": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12queryheap\">ID3D12QueryHeap</a>*</b>\n\nクエリを含む<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12queryheap\">ID3D12QueryHeap</a>を指定します。",
+    "Type": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_type\">D3D12_QUERY_TYPE</a></b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_type\">D3D12_QUERY_TYPE</a>の1つのメンバーを指定します。",
+    "Index": "型: <b>UINT</b>\n\nクエリヒープ内のクエリのインデックスを指定します。"
+  },
+  "Fields": {}
+}
