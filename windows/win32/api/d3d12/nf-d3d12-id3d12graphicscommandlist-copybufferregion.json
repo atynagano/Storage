@@ -1,0 +1,14 @@
+{
+  "Syntax": "void CopyBufferRegion(\n  [In] ID3D12Resource pDstBuffer,\n  [In] ulong DstOffset,\n  [In] ID3D12Resource pSrcBuffer,\n  [In] ulong SrcOffset,\n  [In] ulong NumBytes,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion",
+  "Description": "バッファの領域を、あるリソースから別のリソースにコピーします。",
+  "Remarks": "\nリソース全体をコピーする場合は<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copyresource\">CopyResource</a>方式を検討し、リソースのリージョンをコピーする場合は本方式を使用してください。\n\n\n<b>CopyBufferRegion</b>は、同じヒープメモリをエイリアスするリソースの初期化に使用することができます。詳細は<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createplacedresource\">CreatePlacedResource</a>を参照してください。\n\n\n",
+  "Parameters": {
+    "pDstBuffer": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a>*</b>\n\nデスティネーション<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a>を指定します。",
+    "DstOffset": "型: <b>UINT64</b>\n\n送信先リソースのUINT64オフセット（バイト単位）を指定します。",
+    "pSrcBuffer": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a>*</b>\n\nソース<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12resource\">ID3D12Resource</a>を指定します。",
+    "SrcOffset": "型: <b>UINT64</b>\n\nコピーを開始するソースリソースのUINT64オフセット（バイト単位）を指定します。",
+    "NumBytes": "型: <b>UINT64</b>\n\nコピーするバイト数を指定します。"
+  },
+  "Fields": {}
+}
