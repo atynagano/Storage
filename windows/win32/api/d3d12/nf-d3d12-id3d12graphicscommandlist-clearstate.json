@@ -1,0 +1,10 @@
+{
+  "Syntax": "void ClearState(\n  [Optional][In] ID3D12PipelineState pPipelineState,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-clearstate",
+  "Description": "ダイレクトコマンドリストの状態を、コマンドリスト作成時の状態に戻します。",
+  "Remarks": "\nバンドルで<b>ClearState</b>を呼び出すことは無効です。アプリがバンドル上で<b>ClearState</b>を呼び出した場合、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-close\">Close</a>への呼び出しは<b>E_FAIL</b>を返します。\n\n\n<b>ClearState</b>が呼び出されると、現在バインドされているすべてのリソースがアンバインドされます。プリミティブのトポロジーは<a href=\"https://docs.microsoft.com/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_primitive_topology\">D3D_PRIMITIVE_TOPOLOGY_UNDEFINED</a>に設定されます。ビューポート、シザーレクタンギュル、ステンシル参照値、ブレンドファクターは空の値（すべてゼロ）に設定されます。予測機能は無効です。\n\n\nアプリが提供したパイプラインステートオブジェクトは、現在設定されているパイプラインステートオブジェクトとしてバインドされます。\n\n",
+  "Parameters": {
+    "pPipelineState": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pipelinestate\">ID3D12PipelineState</a>*</b>\n\nコマンドリストの初期パイプライン状態を含む<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12pipelinestate\">ID3D12PipelineState</a>オブジェクトへのポインタです。"
+  },
+  "Fields": {}
+}
