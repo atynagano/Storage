@@ -1,0 +1,11 @@
+{
+  "Syntax": "void SetDescriptorHeaps(\n  [In] uint NumDescriptorHeaps,\n  [In][NativeArrayInfo (CountParamIndex = 0)] ID3D12DescriptorHeap* ppDescriptorHeaps,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-setdescriptorheaps",
+  "Description": "コマンドリストに関連付けられている、現在バインドされている記述子ヒープを変更します。",
+  "Remarks": "<b>SetDescriptorHeaps</b>はバンドルで呼び出すことができますが、バンドルの記述子ヒープが呼び出しコマンドリストの記述子ヒープと一致している必要があります。バンドルの制限については、<a href=\"https://docs.microsoft.com/windows/desktop/direct3d12/recording-command-lists-and-bundles\">Creating and Recording Command Lists and Bundles</a>を参照してください。\n\n以前に設定されたすべてのヒープは、この呼び出しによって設定解除されます。呼び出しで設定できるヒープは、シェーダーで見えるタイプごとに最大1つです。\n\n記述子ヒープを変更すると、ハードウェアによってはパイプラインのフラッシュが発生することがあります。このため、バインドされた記述子ヒープを定期的に変更するのではなく、各タイプの単一のシェーダ可視ヒープを使用し、フレームごとに1回設定することをお勧めします。その代わりに、[**ID3D12Device::Copy記述子s**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-copy記述子s)と[**ID3D12Device:.Copy記述子sSimple**]を使います。Copy記述子sSimple**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-copy記述子ssimple)を使用して、レンダリング時に必要な記述子をシェーダ不透過ヒープから単一のシェーダ可視ヒープにコピーすることができます。\n\n",
+  "Parameters": {
+    "NumDescriptorHeaps": "型: [in] <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n結合する記述子ヒープの数",
+    "ppDescriptorHeaps": "型: [in] <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12descriptorheap\">ID3D12DescriptorHeap</a>*</b>\n\nコマンドリストに設定するヒープ用の<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12descriptorheap\">ID3D12DescriptorHeap</a>オブジェクトの配列へのポインタです。\n\n記述子ヒープは、[**D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-)タイプのものしか結合できません。set記述子heaps)と[**D3D12_DESCRIPTOR_HEAP_TYPE_SAMPLER**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-set記述子heaps)があります。\n\n一度に設定できる記述子ヒープは1種類につき1個のみで、一度に設定できるヒープは最大2個（サンプラー1個、CBV/SRV/UAV1個）となります。"
+  },
+  "Fields": {}
+}
