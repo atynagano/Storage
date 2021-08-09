@@ -1,0 +1,11 @@
+{
+  "Syntax": "void SetGraphicsRoot32BitConstant(\n  [In] uint RootParameterIndex,\n  [In] uint SrcData,\n  [In] uint DestOffsetIn32BitValues,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsroot32bitconstant",
+  "Description": "グラフィックスのルートシグネチャに定数を設定します。",
+  "Parameters": {
+    "RootParameterIndex": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nバインディング用のスロット番号です。",
+    "SrcData": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n設定する定数のソースデータです。",
+    "DestOffsetIn32BitValues": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nルートシグネチャに定数を設定するための32ビット値でのオフセット。"
+  },
+  "Fields": {}
+}
