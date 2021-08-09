@@ -1,0 +1,10 @@
+{
+  "Syntax": "void SetComputeRootDescriptorTable(\n  [In] uint RootParameterIndex,\n  [In] D3D12_GPU_DESCRIPTOR_HANDLE BaseDescriptor,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootdescriptortable",
+  "Description": "記述子テーブルをコンピュート・ルート・シグネチャーに設定します。",
+  "Parameters": {
+    "RootParameterIndex": "型: <b>UINT</b>\n\nバインディング用のスロット番号です。",
+    "BaseDescriptor": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_gpu_descriptor_handle\">D3D12_GPU_DESCRIPTOR_HANDLE</a></b>\n\n設定するベース記述子のGPU_記述子_handleオブジェクトです。"
+  },
+  "Fields": {}
+}
