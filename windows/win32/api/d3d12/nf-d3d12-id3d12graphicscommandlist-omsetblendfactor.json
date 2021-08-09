@@ -1,0 +1,10 @@
+{
+  "Syntax": "void OMSetBlendFactor(\n  [Optional][In][Const][NativeArrayInfo (CountConst = 4)] float* BlendFactor,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-omsetblendfactor",
+  "Description": "ピクセルシェーダ、レンダーターゲット、またはその両方の値を調整するブレンドファクターを設定します。",
+  "Remarks": "\nD3D12_BLEND_BLEND_FACTOR](./ne-d3d12-d3d12_blend.md)または**D3D12_BLEND_INV_BLEND_FACTOR**でblend-stateオブジェクトを作成した場合、ブレンドステージではブレンド係数の非NULL配列を使用します。それ以外の場合、ブレンドステージはブレンド係数の非NULL配列を使用せず、ランタイムがブレンド係数を保存します。\n\nNULLを渡した場合、ランタイムは`{1,1,1,1}`に等しいブレンドファクターを使用または保存します。\n\n",
+  "Parameters": {
+    "BlendFactor": "型: <b>const FLOAT[4]</b>\n\nRGBA成分ごとに1つずつのブレンド係数の配列。"
+  },
+  "Fields": {}
+}
