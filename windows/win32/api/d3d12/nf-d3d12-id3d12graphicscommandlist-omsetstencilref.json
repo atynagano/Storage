@@ -1,0 +1,9 @@
+{
+  "Syntax": "void OMSetStencilRef(\n  [In] uint StencilRef,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-omsetstencilref",
+  "Description": "デプスステンシルテストの基準値を設定します。",
+  "Parameters": {
+    "StencilRef": "型: <b>UINT</b>\n\nデプスステンシルテストを行う際の基準となる値。"
+  },
+  "Fields": {}
+}
