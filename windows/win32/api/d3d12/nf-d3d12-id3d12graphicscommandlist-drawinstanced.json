@@ -1,0 +1,13 @@
+{
+  "Syntax": "void DrawInstanced(\n  [In] uint VertexCountPerInstance,\n  [In] uint InstanceCount,\n  [In] uint StartVertexLocation,\n  [In] uint StartInstanceLocation,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced",
+  "Description": "インデックスのないインスタンス型のプリミティブを描画します。",
+  "Remarks": "\n描画APIは、レンダリングパイプラインに作品を提出します。\n\n\nインスタンス化により、同じジオメトリをシーン内の複数のオブジェクトの描画に再利用することで、パフォーマンスが向上する可能性があります。インスタンス化の例としては\n同じオブジェクトを異なる位置と色で描画する。\n\n\nインスタンス化されたドローコールのための頂点データは、通常、パイプラインにバインドされた頂点バッファから得られます。\nしかし、システムバリューセマンティック（SV_InstanceID）で識別されたインスタンスデータを持つシェーダから頂点データを提供することもできます。\n\n\n\n",
+  "Parameters": {
+    "VertexCountPerInstance": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n描画する頂点の数。",
+    "InstanceCount": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n描画するインスタンスの数。",
+    "StartVertexLocation": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n最初の頂点のインデックス。",
+    "StartInstanceLocation": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\n頂点バッファからインスタンスごとのデータを読み込む前に、各インデックスに追加される値。"
+  },
+  "Fields": {}
+}
