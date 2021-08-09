@@ -1,0 +1,15 @@
+{
+  "Syntax": "void ClearUnorderedAccessViewFloat(\n  [In] D3D12_GPU_DESCRIPTOR_HANDLE ViewGPUHandleInCurrentHeap,\n  [In] D3D12_CPU_DESCRIPTOR_HANDLE ViewCPUHandle,\n  [In] ID3D12Resource pResource,\n  [In][Const] float* Values,\n  [In] uint NumRects,\n  [In][Const][NativeArrayInfo (CountParamIndex = 4)] RECT* pRects,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-clearunorderedaccessviewfloat",
+  "Description": "順不同のアクセスビューのすべての要素を、指定されたフロート値に設定します。",
+  "Remarks": "\n",
+  "Parameters": {
+    "ViewGPUHandleInCurrentHeap": "型: [in] **[D3D12_GPU_DESCRIPTOR_HANDLE](./ns-d3d12-d3d12_gpu_descriptor_handle.md)**\n\nクリアされるUAV（unordered-accessview）用の初期化された記述子を参照する[D3D12_GPU_DESCRIPTOR_HANDLE](./ns-d3d12-d3d12_gpu_記述子_handle.md)。この記述子はシェーダーで見える記述子ヒープになければならず、[Set記述子Heaps](nf-d3d12-id3d12graphicscommandlist-set記述子heaps.md)を介してコマンドリストに設定されなければならない。",
+    "ViewCPUHandle": "型: [in] **[D3D12_CPU_DESCRIPTOR_HANDLE](./ns-d3d12-d3d12_cpu_descriptor_handle.md)**\n\n非シェーダー可視記述子ヒープ内の[D3D12_CPU_DESCRIPTOR_HANDLE](./ns-d3d12-d3d12_cpu_記述子_handle.md)で、クリアされるUAV（unordered-accessview）用の初期化された記述子を参照する。\n\n>[!重要]です。\n>この記述子はシェーダー可視記述子ヒープにあってはならない。これは、（ディスパッチではなく）固定機能のハードウェアとしてクリアを実装するドライバが、記述子から効率的に読み取れるようにするためです。シェーダビジブルヒープは**WRITE_BACK**メモリ（**D3D12_HEAP_TYPE_UPLOAD**ヒープタイプと同様）に作成される可能性があり、このタイプのメモリからのCPUの読み込みは非常に遅いからです。",
+    "pResource": "型: [in] **[ID3D12Resource](./nn-d3d12-id3d12resource.md)\\***\n\nクリアするUAV（unordered-access-view）リソースを表す[ID3D12Resource](./nn-d3d12-id3d12resource.md)インターフェースへのポインタ。",
+    "Values": "型: [in] **const FLOAT[4]**\n\nunordered-access-viewリソースを埋めるための値を含む4つのコンポーネントの配列。",
+    "NumRects": "型: [in] **UINT**\n\npRects*パラメータで指定された配列内の長方形の数です。",
+    "pRects": "型: [in] **const [D3D12_RECT](/windows/win32/direct3d12/d3d12-rect)\\***\n\nクリアするリソースビュー内の矩形を表す**D3D12_RECT**構造体の配列です。NULL**の場合、**ClearUnorderedAccessViewFloat**はリソースビュー全体をクリアします。"
+  },
+  "Fields": {}
+}
