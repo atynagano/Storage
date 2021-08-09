@@ -1,0 +1,12 @@
+{
+  "Syntax": "void OMSetRenderTargets(\n  [In] uint NumRenderTargetDescriptors,\n  [Optional][In][Const] D3D12_CPU_DESCRIPTOR_HANDLE* pRenderTargetDescriptors,\n  [In] BOOL RTsSingleHandleToDescriptorRange,\n  [Optional][In][Const] D3D12_CPU_DESCRIPTOR_HANDLE* pDepthStencilDescriptor,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-omsetrendertargets",
+  "Description": "レンダリングターゲットとデプスステンシルのCPU記述子ハンドルを設定します。",
+  "Parameters": {
+    "NumRenderTargetDescriptors": "型: <b>UINT</b>\n\n<i>pRenderTargetDescriptors</i>配列のエントリ数（0から<b>D3D12_SIMULTANEOUS_RENDER_TARGET_COUNT</b>までの範囲）。このパラメータが0でない場合、pRenderTarget記述子sがポイントする配列のエントリ数は、このパラメータの数と等しくなければなりません。",
+    "pRenderTargetDescriptors": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a>*</b>\n\nレンダーターゲット記述子のヒープの開始を示すCPU記述子ハンドルを記述する<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a>構造体の配列を指定する。このパラメータがNULLで、NumRenderTarget記述子sが0の場合、レンダーターゲットは結合されません。",
+    "RTsSingleHandleToDescriptorRange": "型: <b>BOOL</b>\n\n<b>True</b>とは、渡されたハンドルが<i>NumRenderTargetDescriptors</i>の記述子の連続した範囲へのポインタであることを意味します。このケースは、結合する記述子のセットがたまたまメモリ内で連続している場合に便利です（つまり、必要なのは最初の記述子へのハンドルだけです）。たとえば、<i>NumRenderTargetDescriptors</i>が3の場合、メモリのレイアウトは次のようになります。\n\n<img alt=\"Memory layout with parameter set to true\" src=\"./images/oms_true.png\" />\nこの場合、ドライバーはハンドルの参照を解除してから、指されているメモリをインクリメントします。\n\n<b>False</b>は、ハンドルが<i>NumRenderTargetDescriptors</i>ハンドルの配列の最初のものであることを意味します。<b>False</b>は<i>NumRenderTargetDescriptors</i>ハンドルの配列の最初のハンドルであることを意味します。再び<i>NumRenderTargetDescriptors</i>を3と仮定すると、メモリレイアウトは次のようになります。\n\n<img alt=\"Memory layout with parameter set to false\" src=\"./images/oms_false.png\" />\nこの場合、ドライバーは、メモリ上で隣接していると思われる3つのハンドルを参照解除します。",
+    "pDepthStencilDescriptor": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a>*</b>\n\nデプスステンシル記述子を保持するヒープの開始点を示すCPU記述子ハンドルを記述した<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle\">D3D12_CPU_DESCRIPTOR_HANDLE</a>構造体へのポインタです。このパラメータがNULLの場合、デプスステンシル記述子はバインドされません。"
+  },
+  "Fields": {}
+}
