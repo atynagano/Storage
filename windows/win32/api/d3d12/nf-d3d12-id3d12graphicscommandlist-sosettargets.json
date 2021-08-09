@@ -1,0 +1,11 @@
+{
+  "Syntax": "void SOSetTargets(\n  [In] uint StartSlot,\n  [In] uint NumViews,\n  [Optional][In][Const][NativeArrayInfo (CountParamIndex = 1)] D3D12_STREAM_OUTPUT_BUFFER_VIEW* pViews,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-sosettargets",
+  "Description": "ストリーム出力のバッファビューを設定します。",
+  "Parameters": {
+    "StartSlot": "型: <b>UINT</b>\n\nストリームの出力バッファの設定を開始するために、デバイスのゼロベースの配列にインデックスを設定します。",
+    "NumViews": "型: <b>UINT</b>\n\n<i>pViews</i>配列のエントリー数です。",
+    "pViews": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_stream_output_buffer_view\">D3D12_STREAM_OUTPUT_BUFFER_VIEW</a>*</b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_stream_output_buffer_view\">D3D12_STREAM_OUTPUT_BUFFER_VIEW</a>構造体の配列を指定します。"
+  },
+  "Fields": {}
+}
