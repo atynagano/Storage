@@ -1,0 +1,10 @@
+{
+  "Syntax": "void SetGraphicsRootConstantBufferView(\n  [In] uint RootParameterIndex,\n  [In] ulong BufferLocation,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootconstantbufferview",
+  "Description": "グラフィックスのルートシグネチャーにある定数バッファのCPU記述子ハンドルを設定します。",
+  "Parameters": {
+    "RootParameterIndex": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types\">UINT</a></b>\n\nバインディング用のスロット番号です。",
+    "BufferLocation": "型: <b>D3D12_GPU_VIRTUAL_ADDRESS</b>\n\n定数バッファのGPU仮想アドレスです。\nD3D12_GPU_VIRTUAL_ADDRESSは、UINT64のtypedefされたエイリアスです。"
+  },
+  "Fields": {}
+}
