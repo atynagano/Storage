@@ -1,0 +1,9 @@
+{
+  "Syntax": "void SetGraphicsRootSignature(\n  [Optional][In] ID3D12RootSignature pRootSignature,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootsignature",
+  "Description": "グラフィックスのルートシグネチャのレイアウトを設定します。",
+  "Parameters": {
+    "pRootSignature": "型: <b><a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12rootsignature\">ID3D12RootSignature</a>*</b>\n\n<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/nn-d3d12-id3d12rootsignature\">ID3D12RootSignature</a>オブジェクトへのポインタです。"
+  },
+  "Fields": {}
+}
