@@ -1,0 +1,9 @@
+{
+  "Syntax": "void IASetPrimitiveTopology(\n  [In] D3D_PRIMITIVE_TOPOLOGY PrimitiveTopology,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-iasetprimitivetopology",
+  "Description": "入力アセンブラステージの入力データを記述するプリミティブタイプ、データの順序などの情報をバインドします。",
+  "Parameters": {
+    "PrimitiveTopology": "型: <b>D3D12_PRIMITIVE_TOPOLOGY</b>\n\nプリミティブの種類とプリミティブデータの順序を示す（<a href=\"https://docs.microsoft.com/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_primitive_topology\">D3D_PRIMITIVE_TOPOLOGY</a>参照）。"
+  },
+  "Fields": {}
+}
