@@ -1,0 +1,8 @@
+{
+  "Syntax": "HRESULT Close();",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-close",
+  "Description": "コマンドリストへの記録が終了したことを示します。",
+  "Parameters": {},
+  "Fields": {},
+  "ReturnValue": "型: <b><a href=\"/windows/win32/com/structure-of-com-error-codes\">HRESULT</a></b>\n\n成功した場合は<b>S_OK</b>を、そうでない場合は以下のいずれかの値を返します。\n\n\n<ul><li><b>E_FAIL</b> if the command list has already been closed, or an invalid API was called during command list recording.\n              </li><li><b>E_OUTOFMEMORY</b> if the operating system ran out of memory during recording.\n              </li><li><b>E_INVALIDARG</b> if an invalid argument was passed to the command list API during recording.\n              </li></ul>\nその他の可能な戻り値については<a href=\"/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues\">Direct3D 12 Return Codes</a>を参照してください。"
+}
