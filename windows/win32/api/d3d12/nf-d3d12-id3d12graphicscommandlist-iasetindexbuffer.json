@@ -1,0 +1,10 @@
+{
+  "Syntax": "void IASetIndexBuffer(\n  [Optional][In][Const] D3D12_INDEX_BUFFER_VIEW* pView,\n);",
+  "HelpLink": "https://docs.microsoft.com/windows/win32/api//d3d12/nf-d3d12-id3d12graphicscommandlist-iasetindexbuffer",
+  "Description": "インデックスバッファのビューを設定します。",
+  "Remarks": "\nグラフィックスパイプラインには、一度に1つのインデックスバッファーしかバインドできません。\n\n\n",
+  "Parameters": {
+    "pView": "型: <b>const <a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_index_buffer_view\">D3D12_INDEX_BUFFER_VIEW</a>*</b>\n\nビューでは、インデックスバッファのアドレス、サイズ、<a href=\"https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format\">DXGI_FORMAT</a>を、<a href=\"https://docs.microsoft.com/windows/desktop/api/d3d12/ns-d3d12-d3d12_index_buffer_view\">D3D12_INDEX_BUFFER_VIEW</a>構造体へのポインタとして指定します。"
+  },
+  "Fields": {}
+}
